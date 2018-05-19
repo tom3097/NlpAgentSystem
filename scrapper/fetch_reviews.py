@@ -7,9 +7,8 @@ import scrapy
 
 REVIEWS_URL = 'https://www.amazon.com/product-reviews/{}/ie=UTF8&reviewerType=all_reviews'
 AMAZON_URL = 'https://www.amazon.com'
-MAX_REVIEWS_PER_PRODUCT = 100  # considering reviews with more vote statements than threshold
+MAX_REVIEWS_PER_PRODUCT = 100
 MAX_PRODUCTS_COUNT = 150
-VOTE_STATEMENTS_THRESHOLD = 5
 
 with open('product_ids.json') as f:
     PRODUCTS = json.loads(f.read())
@@ -27,13 +26,12 @@ class ReviewsSpider(scrapy.Spider):
 
     def parse(self, response):
         product_id = self._get_product_id(response.url)
-        reviews_selector = response.xpath('//div[@data-hook="review"]/div')
+        reviews_selector = response.xpath('//div[@data-hook="review"]')
         for review in reviews_selector:
-            self.review_counter[product_id] += 1
             review = {
                 'product_id': product_id,
                 'url': response.url,
-                'id': review.xpath('.//div/@id').extract_first(),
+                'review_id': review.xpath('@id').extract_first(),
                 'text': ' '.join(review.xpath('.//span[@data-hook="review-body"]/text()').extract()),
                 'title': review.xpath('.//a[@data-hook="review-title"]/text()').extract_first(),
                 'score': self._parse_score(
@@ -43,8 +41,7 @@ class ReviewsSpider(scrapy.Spider):
                     review.xpath('.//span[@data-hook="helpful-vote-statement"]/text()').extract_first()
                 )
             }
-            if review['helpful_vote_statements'] >= VOTE_STATEMENTS_THRESHOLD:
-                self.review_counter[product_id] += 1
+            self.review_counter[product_id] += 1
             yield review
 
         pagination_selector = response.css('ul.a-pagination').xpath('.//a/@href')

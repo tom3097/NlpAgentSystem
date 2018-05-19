@@ -4,18 +4,22 @@
 * create new python >=3.5 virtualenv
 * cd scrapper
 * pip install -r requirements.txt
+* cd ..
+
 ### Fetch product ids
 Will fetch product ids and review_count, sometimes it makes mistakes with review count 
 (it happened for one product out of 150 products).
-* scrapy runspider fetch_product_ids.py --logfile product_ids.log -o product_ids.json
+* scrapy runspider scrapper/fetch_product_ids.py --logfile data/pre-nlp/product_ids.log -o data/pre-nlp/product_ids.json
 ### Fetch reviews 
 Will fetch 150 products with most reviews, up to 100 reviews per product 
 (can be changed in static variables).
-* scrapy runspider fetch_reviews.py --logfile reviews.log -o reviews.json
+* scrapy runspider scrapper/fetch_reviews.py --logfile data/pre-nlp/all_reviews.log -o data/pre-nlp/all_reviews.json
 
 ### Pick 100 best products reviews
 Will pick 100 products reviews with most reviews per product 
-and save it into best_products_reviews.json
-* python pick_best_products_reviews.py 
+and save it into data/pre-nlp/reviews.json
+* python scrapper/pick_best_products_reviews.py 
 
 All of above needs to be done one after another.
+
+Data after being processed by nlp should go to data/post-nlp.
