@@ -1,0 +1,54 @@
+[
+  {
+    "product_id": "B004GAR91S",
+    "review_id": "RXQRENAFAO682",
+    "url": "https://www.amazon.com/product-reviews/B004GAR91S/ie=UTF8&reviewerType=all_reviews",
+    "text": "The reason for the 4 is that it took having 3 different computers sent to me before I received one that was not defective. Customer Service from Amazon was great. They were very understanding and even shipped the 3rd one next day air at their expense. Having said that, I am very happy with my Ultrabook. I did have a problem with the screen keyboard popping up when it should not. I contacted Dell and they fixed the problem in a timely manner. (I used their customer chat option because the phone number was always busy). It love it's weight. I had an ASUS tablet but was having some problems so decided if I was going with something new I wanted a computer. Our son has this computer and that is why I bought it. I can use it as a tablet but it still has all the computer capabilities. My first experience with Window 8, but unlike a lot of people I had no problem going from 7 to 8. I did download 8.1 at my sons advise. I think it's a good product now that I have one that is not defective. That does worry me some though. I am hoping I don't have problems in the future. Jan 18, 2014 - I am writing this 1 week after the first review. Yesterday I started experiencing the problem with the screen keyboard again popping up when it was not supposed to. After further investigation I discovered it is a Google Chrome issue. I can use another browser or go into any of my apps and I do not have any problems. It only happens in Google Chrome. I uninstalled the Google Chrome program and reinstalled and it continues to pop up. I can't necessarily blame this on the Ultrabook. I was to the point I considered returning it and getting a refund. I hated to do that because I really do like the computer/tablet capabilities. I love the size and weight also. So I am relieved it is not the computer but I am now using both Google Chrome (which I like because of the syncing capabilities) and Internet Explorer. To me it is just a bump in the road to someone else it could be a very big issue so that I why I even bothered to write about it.",
+    "features": [
+      {
+        "name": "processor",
+        "description": "Single core of laptop's processor is super fast.",
+        "polarity_score": 0.851
+      },
+      {
+        "name": "processor",
+        "description": "Processor has only two cores.",
+        "polarity_score": -0.21
+      },
+      {
+        "name": "display",
+        "description": "Display is bright",
+        "polarity_score": 0.55
+      },
+      {
+        "name": "keyboard",
+        "description": "Keyboard bends under pressure.",
+        "polarity_score": -0.31
+      }
+    ],
+    "title": "Nice Ultrabook",
+    "score": 4.0,
+    "helpful_vote_statements": 10
+  },
+  {
+    "product_id": "B004GAR91S",
+    "review_id": "R2ZC52DFZ8CDUQ",
+    "url": "https://www.amazon.com/product-reviews/B004GAR91S/ie=UTF8&reviewerType=all_reviews",
+    "text": "My husband purchased this for me and I love it.  The only reason I have deducted a star is that the touch screen freezes on occasion (this happened within the first couple of days).  I like that this is highly portable, that it converts easily to a tablet, and that the keyboard is back-lit.  I don't like that there is no SD slot, no HDMI, and on occasion it would be nice to have a BDROM.  There are 2 USB ports, and external volume control.  No Microsoft office programs are included, so if you will need those, plan on purchasing it separately.  As far as the touch screen freezing, I have found that taking the \"live\" buttons and changing them to regular buttons uses less memory (or whatever is causing it to freeze) thus significantly reducing my trouble with the touch screen.  It has only happened once since I did this, and a restart of the computer did the trick.  Obviously this should not be an issue at all, but I love the functionality of this product so much that if it doesn't act up any more, I am willing to not have \"live\" touch buttons.",
+    "features": [
+      {
+        "name": "touch screen",
+        "description": " The only reason I have deducted a star is that the touch screen freezes on occasion",
+        "polarity_score": -0.41
+      },
+      {
+        "name": "keyboard",
+        "description": "the keyboard is back-lit",
+        "polarity_score": 0.56
+      }
+    ],
+    "title": "Touch Screen Freezes",
+    "score": 4.0,
+    "helpful_vote_statements": 2
+  }
+]
