@@ -2,8 +2,15 @@ package com.nlpagentsystem
 
 import org.mongodb.scala.bson.ObjectId
 
-object Review {
-  def apply(productId: String, reviewId: String): Review =
-    Review(new ObjectId(), productId, reviewId)
-}
-case class Review(_id: ObjectId, productId: String, reviewId: String)
+case class Feature(
+  name: String,
+  description: String,
+  polarityScore: Double
+)
+
+case class Review(
+  _id: ObjectId,
+  productId: String,
+  reviewId: String,
+  features: List[Feature]
+)

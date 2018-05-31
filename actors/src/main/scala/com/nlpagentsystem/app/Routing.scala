@@ -1,38 +1,34 @@
-package com.nlpagentsystem
+package com.nlpagentsystem.app
 
 import akka.actor.{ ActorRef, ActorSystem }
 import akka.event.Logging
-
-import scala.concurrent.duration._
 import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.server.Route
 import akka.http.scaladsl.server.directives.MethodDirectives.get
-import akka.http.scaladsl.server.directives.RouteDirectives.complete
 import akka.http.scaladsl.server.directives.PathDirectives.path
-
-import scala.concurrent.Future
+import akka.http.scaladsl.server.directives.RouteDirectives.complete
 import akka.pattern.ask
 import akka.util.Timeout
-import com.nlpagentsystem.OpinionArbiterActor._
+import com.nlpagentsystem.DebateSupervisorActor._
+import com.nlpagentsystem.Opinion
+
+import scala.concurrent.Future
+import scala.concurrent.duration._
 
 trait Routing extends JsonSupport {
 
+  def supervisor(): ActorRef
   implicit def system: ActorSystem
-
+  implicit lazy val timeout = Timeout(15.seconds)
   lazy val log = Logging(system, classOf[Routing])
-
-  def arbiterActor: ActorRef
-
-  implicit lazy val timeout = Timeout(5.seconds) // usually we'd obtain the timeout from the system's configuration
 
   lazy val routes: Route =
     pathPrefix("opinions") {
       concat(
-        path(Segment) { product_id =>
+        path(Segment) { productId =>
           concat(
             get {
-              val maybeOpinion: Future[Opinion] = (arbiterActor ? GetOpinion(product_id)).mapTo[Opinion]
+              val maybeOpinion: Future[Opinion] = (supervisor() ? GetOpinion(productId)).mapTo[Opinion]
               rejectEmptyResponse {
                 complete(maybeOpinion)
               }
@@ -41,4 +37,5 @@ trait Routing extends JsonSupport {
         }
       )
     }
+
 }

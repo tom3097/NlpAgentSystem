@@ -1,7 +1,7 @@
-package com.nlpagentsystem
+package com.nlpagentsystem.app
 
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
-import com.nlpagentsystem.OpinionArbiterActor._
+import com.nlpagentsystem.Opinion
 import spray.json.DefaultJsonProtocol
 
 trait JsonSupport extends SprayJsonSupport {
