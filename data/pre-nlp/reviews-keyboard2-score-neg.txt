@@ -1,0 +1,322 @@
+the screen keyboard again popping up when the problem was not supposed to {'neg': 0.184, 'neu': 0.816, 'pos': 0.0, 'compound': -0.4019}
+the keyboard issue started overheating and then just died completely {'neg': 0.286, 'neu': 0.714, 'pos': 0.0, 'compound': -0.5574}
+keyboard is unprotected when flipped , feels odd {'neg': 0.49, 'neu': 0.51, 'pos': 0.0, 'compound': -0.5859}
+the keyboard remains exposed when in this mode , which for me felt very awkward {'neg': 0.21, 'neu': 0.79, 'pos': 0.0, 'compound': -0.2944}
+Ultimately after 2 weeks the keyboard stopped working {'neg': 0.241, 'neu': 0.759, 'pos': 0.0, 'compound': -0.2263}
+lack of a lighted keyboard is a negative {'neg': 0.6, 'neu': 0.4, 'pos': 0.0, 'compound': -0.7184}
+The Yoga 's keyboard is smaller so that if you have giant hands , or lack finger dexterity , you might have a little trouble typing , at first , although I am a male and I have no trouble typing with it at a very fast pace . {'neg': 0.21, 'neu': 0.79, 'pos': 0.0, 'compound': -0.8081}
+The relatively small Yoga keyboard should be absolutely no problem for females , and all but the most clumsy males . {'neg': 0.18, 'neu': 0.82, 'pos': 0.0, 'compound': -0.409}
+And also the exposed keyboard when using the wifi works as a tablet is no issue , but if you must buy a keyboard cover for extra protection . {'neg': 0.107, 'neu': 0.893, 'pos': 0.0, 'compound': -0.1901}
+Unfortunately the keyboard has no back-light . {'neg': 0.535, 'neu': 0.465, 'pos': 0.0, 'compound': -0.5574}
+the keyboard and mouse are n't turned off like they are in tablet mode {'neg': 0.14, 'neu': 0.86, 'pos': 0.0, 'compound': -0.2755}
+2 -RRB- The keyboard is absolutely terrible {'neg': 0.404, 'neu': 0.596, 'pos': 0.0, 'compound': -0.5256}
+Moreover , the flex in the keyboard itself makes the flex in the keyboard itself even worse to type . {'neg': 0.154, 'neu': 0.846, 'pos': 0.0, 'compound': -0.4767}
+the flex in the keyboard itself even worse to type {'neg': 0.256, 'neu': 0.744, 'pos': 0.0, 'compound': -0.4767}
+the keyboard is virtually useless on the lap {'neg': 0.286, 'neu': 0.714, 'pos': 0.0, 'compound': -0.4215}
+the ones that detached from the keyboard would have more problems after using it for a while {'neg': 0.243, 'neu': 0.757, 'pos': 0.0, 'compound': -0.5413}
+unintended results and 2 -RRB- the tablet mode with the keyboard exposed is n't optimal , both due to the keys {'neg': 0.167, 'neu': 0.833, 'pos': 0.0, 'compound': -0.3421}
+The keyboard is poor , after a couple of months the keys 9 & 0 stopped working . {'neg': 0.333, 'neu': 0.667, 'pos': 0.0, 'compound': -0.6124}
+Exposed keyboard as tablet - The keys will be exposed when you use this as a tablet , while the keys are turned off it is somewhat odd griping this and feeling buttons . {'neg': 0.143, 'neu': 0.81, 'pos': 0.047, 'compound': -0.2748}
+a silicone keyboard cover so crap does n't get in the keys {'neg': 0.252, 'neu': 0.748, 'pos': 0.0, 'compound': -0.5214}
+the keyboard might get hurt {'neg': 0.459, 'neu': 0.541, 'pos': 0.0, 'compound': -0.5267}
+In fact , the keyboard on this machine -LRB- I 'm typing this review on this review -RRB- is infuriating for anyone who 's ever used a decent keyboard in their life -LRB- like the keyboard of a Lenovo ThinkPad or MacBook -RRB- . {'neg': 0.079, 'neu': 0.862, 'pos': 0.058, 'compound': -0.2263}
+the keyboard was just a difficult keyboard to use . {'neg': 0.263, 'neu': 0.737, 'pos': 0.0, 'compound': -0.3612}
+But the difficult bouncy keyboard on top of the sub-par trackpad experience was just too much for me to take . {'neg': 0.112, 'neu': 0.807, 'pos': 0.081, 'compound': -0.1779}
+suddenly , for no reason at all , the keyboard and touch pad stop working completely {'neg': 0.268, 'neu': 0.732, 'pos': 0.0, 'compound': -0.5267}
+keyboard is acceptable for typing , and is probably the single weak point of the device {'neg': 0.159, 'neu': 0.714, 'pos': 0.126, 'compound': -0.1531}
+The keyboard is the worst keyboard i 've ever used in my life . {'neg': 0.272, 'neu': 0.728, 'pos': 0.0, 'compound': -0.6249}
+Other devices I compared : - Lenovo Yoga 13 '' - just a tad too big and it was weird to have the keyboard exposed in the back when folded into tab mode . {'neg': 0.103, 'neu': 0.897, 'pos': 0.0, 'compound': -0.25}
+But the keyboard and mouse devices are a little annoying . {'neg': 0.231, 'neu': 0.769, 'pos': 0.0, 'compound': -0.3415}
+The keyboard unit generates errors when restarting , lenovo reads that as a hardware profile change , which triggers a bit locker error . {'neg': 0.231, 'neu': 0.769, 'pos': 0.0, 'compound': -0.6249}
+Unfortunately , the keyboard on the low end model was not great , so I returned the keyboard on the low end model and began searching for the `` perfect '' machine . {'neg': 0.263, 'neu': 0.638, 'pos': 0.098, 'compound': -0.6362}
+my keyboard completely stopped working {'neg': 0.354, 'neu': 0.646, 'pos': 0.0, 'compound': -0.2944}
+The keyboard does n't have those little chicklet keys crushed together but raised individual ones that give you a desktop feel . {'neg': 0.085, 'neu': 0.915, 'pos': 0.0, 'compound': -0.1945}
+The keyboard would n't reaping the screen rotated and would get suck . {'neg': 0.209, 'neu': 0.791, 'pos': 0.0, 'compound': -0.4404}
+The keyboard format was n't ideal either . {'neg': 0.316, 'neu': 0.684, 'pos': 0.0, 'compound': -0.4168}
+Some parts of keyboard were damaged . . {'neg': 0.367, 'neu': 0.633, 'pos': 0.0, 'compound': -0.4404}
+The keyboard is charged by a plug that goes from the keyboard to the tablet . {'neg': 0.122, 'neu': 0.878, 'pos': 0.0, 'compound': -0.2023}
+In January the P key on the bluetooth keyboard stopped working unless you pounded on it . {'neg': 0.119, 'neu': 0.881, 'pos': 0.0, 'compound': -0.2263}
+The on screen keyboard has an annoying habit of getting stuck on until you tap outside of the edit field several times . {'neg': 0.19, 'neu': 0.81, 'pos': 0.0, 'compound': -0.5719}
+the keyboard stopped working completely {'neg': 0.322, 'neu': 0.678, 'pos': 0.0, 'compound': -0.2263}
+this keyboard waste my time {'neg': 0.412, 'neu': 0.588, 'pos': 0.0, 'compound': -0.4215}
+Opening the laptop , the keyboard area has a good touchpad and and NFC sensor . {'neg': 0.242, 'neu': 0.6, 'pos': 0.158, 'compound': -0.368}
+the keyboard already has slightly less give than the 11 RT it bothers me {'neg': 0.122, 'neu': 0.878, 'pos': 0.0, 'compound': -0.2023}
+The webcam stopped working the virtual keyboard always pops up , even if I 'm in laptop mode . {'neg': 0.112, 'neu': 0.888, 'pos': 0.0, 'compound': -0.2263}
+Opening the yoga 11s up , the keyboard is the first minor disappointment , the keyboard has a very dull look and is n't backlit like a lot of the newer ultrabooks . {'neg': 0.252, 'neu': 0.748, 'pos': 0.0, 'compound': -0.8128}
+Opening the yoga 11s up , the keyboard is the first minor disappointment {'neg': 0.231, 'neu': 0.769, 'pos': 0.0, 'compound': -0.5106}
+the keyboard 's not a huge deal {'neg': 0.282, 'neu': 0.718, 'pos': 0.0, 'compound': -0.2411}
+More importantly , and seemingly very odd to me , the keyboard charges from the screen . {'neg': 0.257, 'neu': 0.602, 'pos': 0.142, 'compound': -0.2732}
+keyboard stopped working , very slow memory ; ca n't operate basic applications . {'neg': 0.16, 'neu': 0.84, 'pos': 0.0, 'compound': -0.2263}
+The keyboard makes this device beyond frustrating to use . {'neg': 0.266, 'neu': 0.734, 'pos': 0.0, 'compound': -0.4404}
+the keyboard charges from the screen , meaning you have to attach the keyboard to the screen and will not be able to use either while the keyboard charges . {'neg': 0.139, 'neu': 0.861, 'pos': 0.0, 'compound': -0.4939}
+the keyboard charges {'neg': 0.512, 'neu': 0.488, 'pos': 0.0, 'compound': -0.2732}
+3 -RRB- Keyboard , not helpful for productivity , the battery of the wireless keyboard is short in time of usage . {'neg': 0.121, 'neu': 0.879, 'pos': 0.0, 'compound': -0.3252}
+the keyboard is out , still not near as nice as a full keyboard {'neg': 0.175, 'neu': 0.825, 'pos': 0.0, 'compound': -0.3252}
+- Physical keyboard stopped responding at one point altogether for 3-4 screens , forcing me to use the virtual keyboard . {'neg': 0.101, 'neu': 0.899, 'pos': 0.0, 'compound': -0.2263}
+The keyboard is difficult to get used to since the keyboard does n't have actual keys {'neg': 0.143, 'neu': 0.857, 'pos': 0.0, 'compound': -0.3612}
+The keyboard is not easy to use {'neg': 0.286, 'neu': 0.714, 'pos': 0.0, 'compound': -0.3412}
+The keyboard is really , really dreadful {'neg': 0.41, 'neu': 0.59, 'pos': 0.0, 'compound': -0.5379}
+The keyboard is not very comfortable {'neg': 0.369, 'neu': 0.631, 'pos': 0.0, 'compound': -0.4439}
+the keyboard is about the worst I have used {'neg': 0.369, 'neu': 0.631, 'pos': 0.0, 'compound': -0.6249}
+keyboard -LRB- especially the space bar -RRB- is not great {'neg': 0.268, 'neu': 0.732, 'pos': 0.0, 'compound': -0.5096}
+They keyboard and track pad are n't as good as a MacBook Pro {'neg': 0.179, 'neu': 0.821, 'pos': 0.0, 'compound': -0.3412}
+Those who prefer more traditional computer keyboards may find the keyboard a bit tricky . -RRB- {'neg': 0.11, 'neu': 0.89, 'pos': 0.0, 'compound': -0.1531}
+the keyboard a bit tricky {'neg': 0.348, 'neu': 0.652, 'pos': 0.0, 'compound': -0.1531}
+the keyboard worked , but did n't inspire confidence that the keyboard would last long . {'neg': 0.386, 'neu': 0.614, 'pos': 0.0, 'compound': -0.8201}
+the keyboard itself has a poor design {'neg': 0.383, 'neu': 0.617, 'pos': 0.0, 'compound': -0.4767}
+the keyboard was n't working , which was one of the complaints listed in the reviews I 'd read {'neg': 0.144, 'neu': 0.856, 'pos': 0.0, 'compound': -0.4019}
+Yes , the keyboard is n't the greatest {'neg': 0.304, 'neu': 0.452, 'pos': 0.244, 'compound': -0.17}
+the keyboard no longer works {'neg': 0.355, 'neu': 0.645, 'pos': 0.0, 'compound': -0.296}
+the detachable keyboard sometimes stops responding during use {'neg': 0.186, 'neu': 0.814, 'pos': 0.0, 'compound': -0.1531}
+The keyboard does n't need to be charged {'neg': 0.205, 'neu': 0.795, 'pos': 0.0, 'compound': -0.2023}
+The keyboard is crap though and has to be re-seated frequently for the keys to respond . {'neg': 0.148, 'neu': 0.852, 'pos': 0.0, 'compound': -0.3818}
+A keyboard was a must because there is no way I can expect to type anything work-related -LRB- coding -RRB- with any efficacy on a touchscreen when I need to press a ton of buttons to enter anything other than a letter . {'neg': 0.061, 'neu': 0.939, 'pos': 0.0, 'compound': -0.296}
+the fact that you did not get a keyboard with it and the price was extreme to begin with did not sit well with me {'neg': 0.073, 'neu': 0.927, 'pos': 0.0, 'compound': -0.2057}
+the keyboard 's not backlit either - which perhaps is n't a surprise a this price-point {'neg': 0.131, 'neu': 0.869, 'pos': 0.0, 'compound': -0.2057}
+the keyboard susceptible to getting dirt , key damage , etc. {'neg': 0.444, 'neu': 0.556, 'pos': 0.0, 'compound': -0.6808}
+Further , the response to any keyboard action was very delayed , which made for an extremely slow computer . {'neg': 0.121, 'neu': 0.879, 'pos': 0.0, 'compound': -0.2944}
+the keyboard stopped working on -LRB- spilling coffee on the t200ta probably did n't help -RRB- {'neg': 0.229, 'neu': 0.771, 'pos': 0.0, 'compound': -0.4867}
+The keyboard is my biggest complaint {'neg': 0.306, 'neu': 0.694, 'pos': 0.0, 'compound': -0.296}
+the keyboard is awkward {'neg': 0.348, 'neu': 0.652, 'pos': 0.0, 'compound': -0.1531}
+The screws on the keyboard is also way too tight , or flimsy . {'neg': 0.154, 'neu': 0.846, 'pos': 0.0, 'compound': -0.25}
+Not to mention , the keyboard has a really difficult time detecting the monitor when attached and beeps constantly as if the monitor is constantly sliding out even though the monitor is not . {'neg': 0.085, 'neu': 0.915, 'pos': 0.0, 'compound': -0.4201}
+The latch system between the keyboard and the tablet is not as good as on the T100 , This may be because the keyboard is flimsier and the tablet is heavier . {'neg': 0.077, 'neu': 0.923, 'pos': 0.0, 'compound': -0.3412}
+The keyboard however , the keyboard was a pain , drained the battery of the tablet greatly . {'neg': 0.326, 'neu': 0.674, 'pos': 0.0, 'compound': -0.7003}
+the keyboard is a little flimsy and am worried about the error codes I received {'neg': 0.308, 'neu': 0.692, 'pos': 0.0, 'compound': -0.5994}
+This keyboard is n't even recognizable as a standard format and has a bunch of French crap all over this keyboard . {'neg': 0.126, 'neu': 0.874, 'pos': 0.0, 'compound': -0.3818}
+Some of the keyboard keys have become `` stuck '' or are hard to push , some of the keyboard keys require more weight from the fingers than other keys do . {'neg': 0.108, 'neu': 0.892, 'pos': 0.0, 'compound': -0.34}
+Some of the keyboard keys have become `` stuck '' or are hard to push {'neg': 0.207, 'neu': 0.793, 'pos': 0.0, 'compound': -0.34}
+the keyboard was defective {'neg': 0.492, 'neu': 0.508, 'pos': 0.0, 'compound': -0.4404}
+the keyboard was defective {'neg': 0.492, 'neu': 0.508, 'pos': 0.0, 'compound': -0.4404}
+the keyboard was defective for my course {'neg': 0.326, 'neu': 0.674, 'pos': 0.0, 'compound': -0.4404}
+the keyboard was defective was a huge inconvenience for both of us {'neg': 0.344, 'neu': 0.51, 'pos': 0.146, 'compound': -0.4767}
+Within a few months of purchase -LRB- Aug 2015 -RRB- , the keyboard stopped working . {'neg': 0.137, 'neu': 0.863, 'pos': 0.0, 'compound': -0.2263}
+random keyboard failures refused {'neg': 0.722, 'neu': 0.278, 'pos': 0.0, 'compound': -0.6369}
+random keyboard failures had other reports of similar problems {'neg': 0.449, 'neu': 0.551, 'pos': 0.0, 'compound': -0.6908}
+random keyboard failures said no supposedly after checking random keyboard failures records -LRB- a lie -RRB- {'neg': 0.406, 'neu': 0.594, 'pos': 0.0, 'compound': -0.802}
+random keyboard failures even made me pay for shipping the defective laptop back to random keyboard failures . {'neg': 0.442, 'neu': 0.558, 'pos': 0.0, 'compound': -0.8519}
+However , the keyboard stopped working after only three months . {'neg': 0.192, 'neu': 0.808, 'pos': 0.0, 'compound': -0.2263}
+The ribbon cable that plugs the keyboard to the motherboard is , from the factory severely kinked in a way that WILL make this laptop useless to type on . {'neg': 0.188, 'neu': 0.812, 'pos': 0.0, 'compound': -0.7003}
+About 2 years later the keyboard has keys falling off and intermittently not working . {'neg': 0.118, 'neu': 0.882, 'pos': 0.0, 'compound': -0.1531}
+However as soon as I bought the products I started seeing problems . . First one , keyboard keys doesnt work properly . {'neg': 0.144, 'neu': 0.856, 'pos': 0.0, 'compound': -0.4019}
+The keyboard and trackpad randomly stop working {'neg': 0.268, 'neu': 0.732, 'pos': 0.0, 'compound': -0.296}
+The keyboard backlight stops working at the same time . {'neg': 0.167, 'neu': 0.833, 'pos': 0.0, 'compound': -0.1531}
+The keyboard is a bit weird with the positioning of the Page Up/Page Down and Tilde keys . {'neg': 0.102, 'neu': 0.898, 'pos': 0.0, 'compound': -0.1779}
+the keyboard was not working well {'neg': 0.266, 'neu': 0.734, 'pos': 0.0, 'compound': -0.2057}
+The keyboard was really the only thing I did n't like about the machine . {'neg': 0.15, 'neu': 0.85, 'pos': 0.0, 'compound': -0.2755}
+The keyboard sucks and no feel . {'neg': 0.54, 'neu': 0.46, 'pos': 0.0, 'compound': -0.5719}
+A month or so later , keys on the leftmost side of the keyboard periodically stop responding . {'neg': 0.136, 'neu': 0.864, 'pos': 0.0, 'compound': -0.296}
+After a few months , the keyboard started failing . {'neg': 0.355, 'neu': 0.645, 'pos': 0.0, 'compound': -0.5106}
+Within 3 months keyboard stopped functioning properly . {'neg': 0.275, 'neu': 0.725, 'pos': 0.0, 'compound': -0.2263}
+no lighted keyboard and the screen does not detach {'neg': 0.216, 'neu': 0.784, 'pos': 0.0, 'compound': -0.296}
+often , the keyboard fails to function when the device is booted {'neg': 0.219, 'neu': 0.781, 'pos': 0.0, 'compound': -0.4215}
+No backlit keyboard , battery life is 5-6 hours -LRB- 9 for the MacBook Pro -RRB- , a tad heavy at 5 lbs -LRB- 3.5 for the MacBook Pro -RRB- {'neg': 0.084, 'neu': 0.916, 'pos': 0.0, 'compound': -0.296}
+Same damn computer in every way but the lite keyboard and only Bestbuy has that one . {'neg': 0.11, 'neu': 0.89, 'pos': 0.0, 'compound': -0.2144}
+The keyboard stopped working after 1 year {'neg': 0.275, 'neu': 0.725, 'pos': 0.0, 'compound': -0.2263}
+Within three months , some keys on keyboard stopped working . {'neg': 0.192, 'neu': 0.808, 'pos': 0.0, 'compound': -0.2263}
+the keyboard is a little flimsy -LRB- cheap plastic -RRB- and the touch pad a little rough with no buttons {'neg': 0.102, 'neu': 0.898, 'pos': 0.0, 'compound': -0.235}
+Within 3 months keyboard stopped functioning properly . {'neg': 0.275, 'neu': 0.725, 'pos': 0.0, 'compound': -0.2263}
+for any reason the keyboard functions lag or fail to work particularly while browsing internet pages with a lot of content {'neg': 0.247, 'neu': 0.753, 'pos': 0.0, 'compound': -0.7096}
+The keyboard connectivity is very poor . {'neg': 0.404, 'neu': 0.596, 'pos': 0.0, 'compound': -0.5256}
+the online reviews the keyboard a product defect {'neg': 0.286, 'neu': 0.714, 'pos': 0.0, 'compound': -0.34}
+My keyboard has stopped working , any idea on how to get this fixed ? {'neg': 0.137, 'neu': 0.863, 'pos': 0.0, 'compound': -0.2263}
+Worst of all , keyboard goes to sleep fairly quickly {'neg': 0.339, 'neu': 0.661, 'pos': 0.0, 'compound': -0.6249}
+As I type , the keyboard either lags or does n't register , depending on the time of day {'neg': 0.143, 'neu': 0.857, 'pos': 0.0, 'compound': -0.3612}
+The Bluetooth keyboard does take a little time to connect , not a big deal but not as nice as just clicking a button . {'neg': 0.136, 'neu': 0.864, 'pos': 0.0, 'compound': -0.4585}
+the keyboard 's somewhat tactile -LRB- but no click . -RRB- {'neg': 0.237, 'neu': 0.763, 'pos': 0.0, 'compound': -0.4215}
+both of these components -- the tablet screen and the keyboard -- must be charged separately with microUSB cables {'neg': 0.091, 'neu': 0.909, 'pos': 0.0, 'compound': -0.2023}
+The keyboard timeout is annoying , the keyboard timeout should n't be there . {'neg': 0.197, 'neu': 0.803, 'pos': 0.0, 'compound': -0.4019}
+The keyboard timeout is annoying {'neg': 0.403, 'neu': 0.597, 'pos': 0.0, 'compound': -0.4019}
+this keyboard is the worst thing I have used as far as a computer product is concerned {'neg': 0.227, 'neu': 0.773, 'pos': 0.0, 'compound': -0.6249}
+At first , the keyboard/tablet may feel a little odd to type and then want to do something quickly , say go to the start menu , without using the keyboard {'neg': 0.071, 'neu': 0.883, 'pos': 0.046, 'compound': -0.1796}
+the Yoga 's keyboard is awful {'neg': 0.375, 'neu': 0.625, 'pos': 0.0, 'compound': -0.4588}
+the keyboard lighting awkward looking , and hard to hold {'neg': 0.3, 'neu': 0.7, 'pos': 0.0, 'compound': -0.25}
+* screen and base/keyboard do n't fit flush together when in tablet form {'neg': 0.161, 'neu': 0.839, 'pos': 0.0, 'compound': -0.2755}
+That fixed , the keyboard stopped working . {'neg': 0.275, 'neu': 0.725, 'pos': 0.0, 'compound': -0.2263}
+Then some keys on the keyboard stopped working again . {'neg': 0.192, 'neu': 0.808, 'pos': 0.0, 'compound': -0.2263}
+the display and the keyboard are charged separately which would usually make me irritated but the keyboard battery last for at least a week {'neg': 0.139, 'neu': 0.861, 'pos': 0.0, 'compound': -0.34}
+the keyboard is not perfect , but ultimately , at less than $ 500 {'neg': 0.167, 'neu': 0.833, 'pos': 0.0, 'compound': -0.2498}
+Since you 're dealing with the jank-fest that is Bluetooth , however , the keyboard will occasionally act as though a key is stuck by repeating the same keystroke endlessly until you press another key . {'neg': 0.061, 'neu': 0.939, 'pos': 0.0, 'compound': -0.25}
+The keyboard of the CHI does not have any backlit , which is very difficult when you 're in bed or a dark area to type . {'neg': 0.108, 'neu': 0.892, 'pos': 0.0, 'compound': -0.4201}
+The Bluetooth keyboard is sometimes a pain to connect {'neg': 0.32, 'neu': 0.68, 'pos': 0.0, 'compound': -0.5106}
+keyboard stopped working after just 2 weeks . {'neg': 0.275, 'neu': 0.725, 'pos': 0.0, 'compound': -0.2263}
+this crap of a keyboard has something to do -- at least partially -- with why the tablet malfunctions {'neg': 0.133, 'neu': 0.867, 'pos': 0.0, 'compound': -0.3818}
+along with many others here the keyboard is not user friendly {'neg': 0.208, 'neu': 0.792, 'pos': 0.0, 'compound': -0.3875}
+the keyboard stopped working on me {'neg': 0.275, 'neu': 0.725, 'pos': 0.0, 'compound': -0.2263}
+One final criticism about the keyboard {'neg': 0.367, 'neu': 0.633, 'pos': 0.0, 'compound': -0.4404}
+The keyboard has completely stopped working {'neg': 0.305, 'neu': 0.695, 'pos': 0.0, 'compound': -0.2944}
+Speaking of the touchpad , the functionality of the keyboard is really frustrating sometimes . {'neg': 0.21, 'neu': 0.79, 'pos': 0.0, 'compound': -0.4927}
+then the onscreen keyboard is worthless {'neg': 0.367, 'neu': 0.633, 'pos': 0.0, 'compound': -0.4404}
+Onscreen keyboard - Occasionally the tablet wo n't pull up and onscreen keyboard which leads to an inability to do any typing unless I either restarted the tablet or attached the keyboard {'neg': 0.085, 'neu': 0.915, 'pos': 0.0, 'compound': -0.4019}
+the keyboard does n't have quite the same feel to it unfortunately {'neg': 0.179, 'neu': 0.821, 'pos': 0.0, 'compound': -0.34}
+keyboard is worse {'neg': 0.608, 'neu': 0.392, 'pos': 0.0, 'compound': -0.4767}
+About once a day the keyboard stops being recognized {'neg': 0.186, 'neu': 0.814, 'pos': 0.0, 'compound': -0.1531}
+The keyboard will sometimes randomly stop responding . {'neg': 0.268, 'neu': 0.732, 'pos': 0.0, 'compound': -0.296}
+on the physical keyboard windows 8.1 's onscreen keyboard switches over to physical mode and hides the onscreen keyboard {'neg': 0.086, 'neu': 0.914, 'pos': 0.0, 'compound': -0.1779}
+The keyboard is not the best {'neg': 0.402, 'neu': 0.598, 'pos': 0.0, 'compound': -0.5216}
+complaints about the keyboard being cheap , or not backlit {'neg': 0.252, 'neu': 0.748, 'pos': 0.0, 'compound': -0.4019}
+2 -RRB- The keyboard undocks itself a few times per hour which is frustrating when you are writing a report {'neg': 0.153, 'neu': 0.847, 'pos': 0.0, 'compound': -0.4404}
+the keyboard sucks {'neg': 0.556, 'neu': 0.444, 'pos': 0.0, 'compound': -0.3612}
+The keyboard stops functioning intermittently so you have to remove the tablet portion and then reset the keyboard to get the keyboard working again . {'neg': 0.065, 'neu': 0.935, 'pos': 0.0, 'compound': -0.1531}
+Connector from tablet to keyboard redesigned which is what failed after 3 + years on my first one . {'neg': 0.18, 'neu': 0.82, 'pos': 0.0, 'compound': -0.5106}
+About tow months into owning this item the keyboard stopped functioning properly . {'neg': 0.147, 'neu': 0.853, 'pos': 0.0, 'compound': -0.2263}
+The included keyboard dock also is also of lower quality and bends inward at times when typing . {'neg': 0.121, 'neu': 0.879, 'pos': 0.0, 'compound': -0.296}
+- The keyboard stops working every once and then . {'neg': 0.186, 'neu': 0.814, 'pos': 0.0, 'compound': -0.1531}
+the keyboard and track pad will stop responding {'neg': 0.239, 'neu': 0.761, 'pos': 0.0, 'compound': -0.296}
+allthough THE BAD They keyboard is where the lack of quality really lies {'neg': 0.49, 'neu': 0.51, 'pos': 0.0, 'compound': -0.8633}
+The backlit keyboard and trackpad are impressive , which I was hesitant about before purchase because of some poor reviews {'neg': 0.218, 'neu': 0.641, 'pos': 0.141, 'compound': -0.2023}
+keyboard plugged into my poor man 's docking station {'neg': 0.279, 'neu': 0.721, 'pos': 0.0, 'compound': -0.4767}
+keyboard will stop responding , for example {'neg': 0.306, 'neu': 0.694, 'pos': 0.0, 'compound': -0.296}
+the keyboard will turn off and stop working after the laptop is awaken from sleep mode {'neg': 0.128, 'neu': 0.872, 'pos': 0.0, 'compound': -0.296}
+The keyboard and touchpad work great , the screen -LRB- tablet -RRB- is a bit heavy but not so much as to mess with balance . {'neg': 0.121, 'neu': 0.784, 'pos': 0.095, 'compound': -0.1779}
+the keyboard are snazzy , but for me , rather worthless . {'neg': 0.325, 'neu': 0.675, 'pos': 0.0, 'compound': -0.5927}
+Still have to watch how little pressure I put on the keyboard center access . {'neg': 0.137, 'neu': 0.863, 'pos': 0.0, 'compound': -0.228}
+the keyboard would not be recognized after falling asleep {'neg': 0.167, 'neu': 0.833, 'pos': 0.0, 'compound': -0.1531}
+Also the keyboard contact is intermittent and loses the keyboard contact connection constantly ! {'neg': 0.178, 'neu': 0.822, 'pos': 0.0, 'compound': -0.3802}
+In addition , the keyboard is noisy . {'neg': 0.254, 'neu': 0.746, 'pos': 0.0, 'compound': -0.1779}
+My keyboard dock was missing some rubber bumpers {'neg': 0.239, 'neu': 0.761, 'pos': 0.0, 'compound': -0.296}
+really the keyboard section alternates between unnoticeable to slightly irritating {'neg': 0.231, 'neu': 0.769, 'pos': 0.0, 'compound': -0.4033}
+the keyboard section overly annoying {'neg': 0.403, 'neu': 0.597, 'pos': 0.0, 'compound': -0.4019}
+Also the replacement keyboard was of an even poorer quality . {'neg': 0.217, 'neu': 0.783, 'pos': 0.0, 'compound': -0.3612}
+The keyboard sucks , too . {'neg': 0.455, 'neu': 0.545, 'pos': 0.0, 'compound': -0.3612}
+For some reason , occasionally the keyboard will double type letters for no reason whatsoever . {'neg': 0.145, 'neu': 0.855, 'pos': 0.0, 'compound': -0.296}
+In my mind , this sort of defeats the purpose of the 2-in-1 mobile device though , if you have to have a keyboard plugged in . {'neg': 0.105, 'neu': 0.895, 'pos': 0.0, 'compound': -0.3804}
+The keyboard is pretty terrible with bad responsiveness . {'neg': 0.446, 'neu': 0.338, 'pos': 0.216, 'compound': -0.5267}
+Horrible keyboard for typing , got a . dll error simply setting up windows . {'neg': 0.408, 'neu': 0.592, 'pos': 0.0, 'compound': -0.7351}
+The keyboard is kind of small , and does not feel comfortable for extended typing tasks . {'neg': 0.162, 'neu': 0.838, 'pos': 0.0, 'compound': -0.4023}
+Then over the next several weeks of usage , the keyboard started failing . {'neg': 0.231, 'neu': 0.769, 'pos': 0.0, 'compound': -0.5106}
+- The lack of backlit keyboard is my only real regret . {'neg': 0.389, 'neu': 0.611, 'pos': 0.0, 'compound': -0.6249}
+No complaints of the keyboard , but the machine itself is just nothing but headache . {'neg': 0.223, 'neu': 0.777, 'pos': 0.0, 'compound': -0.3506}
+However , touchpad & keyboard is just bad . {'neg': 0.412, 'neu': 0.588, 'pos': 0.0, 'compound': -0.5423}
+keyboard remains unprotected in the tablet mode {'neg': 0.294, 'neu': 0.706, 'pos': 0.0, 'compound': -0.3612}
+when I 'm typing something , the keyboard will lag {'neg': 0.255, 'neu': 0.745, 'pos': 0.0, 'compound': -0.34}
+Observations that I made before about the overall lack of speed , trackpad , and keyboard are persistent problems that prevent the computer from being a useful . {'neg': 0.179, 'neu': 0.679, 'pos': 0.143, 'compound': -0.25}
+the keyboard is hot to the touch - very uncomfortable {'neg': 0.266, 'neu': 0.734, 'pos': 0.0, 'compound': -0.4391}
+the keyboard is a bit awkward and takes getting used to {'neg': 0.151, 'neu': 0.849, 'pos': 0.0, 'compound': -0.1531}
+However the keyboard is n't sensitive enough so even with deliberate thumping of the keys I miss the odd letter here and there , probably one or two per line ! {'neg': 0.139, 'neu': 0.861, 'pos': 0.0, 'compound': -0.4926}
+the keyboard barely work i hate it {'neg': 0.406, 'neu': 0.594, 'pos': 0.0, 'compound': -0.5302}
+keyboard does n't work well {'neg': 0.312, 'neu': 0.688, 'pos': 0.0, 'compound': -0.2057}
+In desktop mode , the touch keyboard wo n't engage when you select a text field , and must be selected from the menu , then select the field , then type and touch enter , then touch keyboard menu button , then select ` close keyboard ' . {'neg': 0.051, 'neu': 0.949, 'pos': 0.0, 'compound': -0.2584}
+as time has gone by , the connection between the tablet and keyboard sections has only gotten worse and worse {'neg': 0.267, 'neu': 0.733, 'pos': 0.0, 'compound': -0.7351}
+keyboard was difficult to use anyway because the keys kept jumping back several characters . {'neg': 0.161, 'neu': 0.839, 'pos': 0.0, 'compound': -0.3612}
+weight with keyboard more than i thought it would be , but so far no disabling problems . {'neg': 0.485, 'neu': 0.515, 'pos': 0.0, 'compound': -0.9065}
+keyboard/mouse only works when the screen is pushed all the way back -LRB- keyboard defect {'neg': 0.146, 'neu': 0.854, 'pos': 0.0, 'compound': -0.34}
+- front camera not detected in windows - no battery inside keyboard - chicklet keys not very responsive , take some getting used to . {'neg': 0.201, 'neu': 0.799, 'pos': 0.0, 'compound': -0.5464}
+The keyboard has no problems , no missing keys {'neg': 0.699, 'neu': 0.301, 'pos': 0.0, 'compound': -0.8074}
+now the keyboard 's a pice of crap that only worked for a couple of times {'neg': 0.167, 'neu': 0.833, 'pos': 0.0, 'compound': -0.3818}
+Some keyboards are not that great on laptops/notebooks {'neg': 0.32, 'neu': 0.68, 'pos': 0.0, 'compound': -0.5096}
+The backlit keyboard also is visible in the dark but not too bright . {'neg': 0.206, 'neu': 0.794, 'pos': 0.0, 'compound': -0.4782}
+4 stars because of the weight of the tablet with the keyboard have presented problems opening the unit . {'neg': 0.144, 'neu': 0.856, 'pos': 0.0, 'compound': -0.4019}
+The touch pad on keyboard is not responsive or it is difficult to get cursor to place cursor needs to be . {'neg': 0.195, 'neu': 0.805, 'pos': 0.0, 'compound': -0.5588}
+the keyboard is not super loud as you type {'neg': 0.282, 'neu': 0.718, 'pos': 0.0, 'compound': -0.4847}
+Slow , bad keyboard design shift is in the wrong place and bad keyboard design shift 's garbage . {'neg': 0.419, 'neu': 0.581, 'pos': 0.0, 'compound': -0.8779}
+Wish I could return bad keyboard design shift 😖 Off to sell bad keyboard design shift for nothing I guess Never will buy another Lenovo {'neg': 0.236, 'neu': 0.673, 'pos': 0.091, 'compound': -0.6486}
+this keyboard ought to be fired {'neg': 0.419, 'neu': 0.581, 'pos': 0.0, 'compound': -0.5574}
+the keyboard/mouse are on making any use of the tablet worthless {'neg': 0.225, 'neu': 0.775, 'pos': 0.0, 'compound': -0.4404}
+Only thing I can say bad about the keyboard is it does n't have a full num pad {'neg': 0.189, 'neu': 0.811, 'pos': 0.0, 'compound': -0.5423}
+the keyboard is a little flimsy so if you press hard on the keys the actual metal bends in slightly but you shouldnt need to press that hard {'neg': 0.101, 'neu': 0.899, 'pos': 0.0, 'compound': -0.2023}
+No back-lit keyboard but that really is my only complaint . {'neg': 0.355, 'neu': 0.645, 'pos': 0.0, 'compound': -0.5267}
+flip keyboard - battery life - quality of the build - speed - sound quality - wifi speed - comes with case what is missing : {'neg': 0.109, 'neu': 0.891, 'pos': 0.0, 'compound': -0.296}
+the keyboard is not backlight but it 's nothing too important {'neg': 0.159, 'neu': 0.841, 'pos': 0.0, 'compound': -0.2235}
+The middle area of the keyboard is a bit weak On/Off button not very convenient . {'neg': 0.182, 'neu': 0.818, 'pos': 0.0, 'compound': -0.4404}
+The keyboard directs right onto the motherboard to if you spill a drop -LRB- and I mean a drop -RRB- of liquid on it the system is done for . {'neg': 0.149, 'neu': 0.851, 'pos': 0.0, 'compound': -0.4939}
+the keyboard finally died {'neg': 0.545, 'neu': 0.455, 'pos': 0.0, 'compound': -0.5574}
+Other than the fact that the keyboard is removable it 's worthless as a tablet . {'neg': 0.182, 'neu': 0.818, 'pos': 0.0, 'compound': -0.4404}
+Pro- keyboard does not need to be separately charged . {'neg': 0.184, 'neu': 0.816, 'pos': 0.0, 'compound': -0.2023}
+However , the touchpad on the keyboard cover is abysmally sensitive and can drive you nuts as the price flies all over the screen . {'neg': 0.095, 'neu': 0.905, 'pos': 0.0, 'compound': -0.3182}
+a distraction Backside of keyboard is a soft material that might not be durable Could have used a better startup cheat sheet USB charging port seemed flimsy -LRB- why I upgraded to the magnetic port -RRB- {'neg': 0.149, 'neu': 0.773, 'pos': 0.077, 'compound': -0.4019}
+The keyboard is so small and of such poor quality that there I continuously produces tons of typos and this slows down my homework considerably . {'neg': 0.119, 'neu': 0.881, 'pos': 0.0, 'compound': -0.4767}
+As a laptop , the small screen and lack of back light on the keyboard are where this device falls down . {'neg': 0.113, 'neu': 0.887, 'pos': 0.0, 'compound': -0.3182}
+accidents with the keyboard coming away if you 're moving the device {'neg': 0.173, 'neu': 0.827, 'pos': 0.0, 'compound': -0.3182}
+later , the keyboard matrix just randomly broke {'neg': 0.318, 'neu': 0.682, 'pos': 0.0, 'compound': -0.4215}
+the keyboard and bottom plate are a dull glittery , flexible plastic that really reduces the premium feel of the device {'neg': 0.125, 'neu': 0.787, 'pos': 0.088, 'compound': -0.2023}
+The keyboard stopped working . {'neg': 0.388, 'neu': 0.612, 'pos': 0.0, 'compound': -0.2263}
+Used it for regular homework and website searching for less than a month , the keyboard stopped working . {'neg': 0.112, 'neu': 0.888, 'pos': 0.0, 'compound': -0.2263}
+Lost one star only for the keyboard , although the computer is backlit the right shift button has an awful size and position , hard to get used to the computer once I use a normal keyboard at work . {'neg': 0.173, 'neu': 0.827, 'pos': 0.0, 'compound': -0.6908}
+every other keyboard I use is NOT like this {'neg': 0.232, 'neu': 0.768, 'pos': 0.0, 'compound': -0.2755}
+Also , the Windows 10 on screen keyboard is awful . {'neg': 0.273, 'neu': 0.727, 'pos': 0.0, 'compound': -0.4588}
+The lack of a manual , the mystery of illuminating the keyboard backlight -LRB- the keys , themselves , do not light up -RRB- and the bad-ol ' Lenovo keyboard idiosyncrasies interfere with a smooth transition to this machine , but , even so - after only a few days of regular use , none of these things remained meaningfully problematic . {'neg': 0.103, 'neu': 0.897, 'pos': 0.0, 'compound': -0.6705}
+the keyboard in the r13 'll get the job done for casual to medium users , but can get fatiguing during long sessions spent typing . {'neg': 0.107, 'neu': 0.84, 'pos': 0.053, 'compound': -0.34}
+part of my complaints regarding this keyboard are due to the fact that there is enough flex in the center of the laptop 's body that you often feel a bit of give when a key bottoms out {'neg': 0.072, 'neu': 0.928, 'pos': 0.0, 'compound': -0.4019}
+the keyboard -LRB- specifically the spacebar -RRB- kills this for me {'neg': 0.259, 'neu': 0.741, 'pos': 0.0, 'compound': -0.5423}
+The keyboard failed . {'neg': 0.623, 'neu': 0.377, 'pos': 0.0, 'compound': -0.5106}
+the keyboard had a hardware fault {'neg': 0.403, 'neu': 0.597, 'pos': 0.0, 'compound': -0.4019}
+The keyboard crashes every 30 minutes when using Revit and the only way to get revit working again is to disconnect and reconnect the base , which means you lose your work and your time . {'neg': 0.076, 'neu': 0.924, 'pos': 0.0, 'compound': -0.4019}
+The tablet -LRB- computer portion -RRB- and keyboard docks are somehow inexplicably paired so replacing a malfunctioning keyboard dock means losing all of your data , which makes very little sense . {'neg': 0.085, 'neu': 0.915, 'pos': 0.0, 'compound': -0.3818}
+not excellent -- but keyboard feel is subjective {'neg': 0.222, 'neu': 0.778, 'pos': 0.0, 'compound': -0.2498}
+The keyboard is not perfect though {'neg': 0.375, 'neu': 0.625, 'pos': 0.0, 'compound': -0.4585}
+The keyboard also did not give me any problems . {'neg': 0.252, 'neu': 0.748, 'pos': 0.0, 'compound': -0.4019}
+lots of random delays when starting up , switching from keyboard mode to touch mode ... now the blue screen of death after only 5 months more problems : mouse/touchpad is unresponsive , can barely hear the sound many times {'neg': 0.169, 'neu': 0.831, 'pos': 0.0, 'compound': -0.7841}
+Not a very good device , keyboard didnt ' t always work {'neg': 0.273, 'neu': 0.727, 'pos': 0.0, 'compound': -0.3865}
+2 -RRB- The keyboard , especially the touch pad , is a bit difficult to handle . {'neg': 0.185, 'neu': 0.815, 'pos': 0.0, 'compound': -0.3612}
+The keyboard has gotten worse {'neg': 0.437, 'neu': 0.563, 'pos': 0.0, 'compound': -0.4767}
+The keyboard is n't quite as good {'neg': 0.303, 'neu': 0.697, 'pos': 0.0, 'compound': -0.3843}
+Some issues with the keyboard/cover part not always latching on correctly , mouse/track pad not always working well . {'neg': 0.102, 'neu': 0.898, 'pos': 0.0, 'compound': -0.2057}
+Also the inability to use the keyboard connection as a tablet without burning myself is not acceptable . {'neg': 0.25, 'neu': 0.75, 'pos': 0.0, 'compound': -0.5664}
+The first time I knicked the keyboard , the second time the screen shattered . {'neg': 0.22, 'neu': 0.78, 'pos': 0.0, 'compound': -0.4767}
+the keyboard is just horrible , the tab that holds the stylus also broke within the first few weeks . {'neg': 0.283, 'neu': 0.717, 'pos': 0.0, 'compound': -0.743}
+The bluetooth keyboard must be charged separately from the computer {'neg': 0.167, 'neu': 0.833, 'pos': 0.0, 'compound': -0.2023}
+the bluetooth keyboard also looses connection quite frequently {'neg': 0.186, 'neu': 0.814, 'pos': 0.0, 'compound': -0.1531}
+Mouse , keyboard barely worked , and did n't function anything like the manual . {'neg': 0.161, 'neu': 0.839, 'pos': 0.0, 'compound': -0.2755}
+The tablet and keyboard charge separately , very inconvenient to use . {'neg': 0.23, 'neu': 0.77, 'pos': 0.0, 'compound': -0.4005}
+Quite often keyboard will lose keyboard bluetooth connection to the tablet , this results in an extremely tempramental touchpad that is frustrating to use , until it finally just disconnects and wo n't work anymore . {'neg': 0.153, 'neu': 0.847, 'pos': 0.0, 'compound': -0.6808}
+The keyboard stops working . {'neg': 0.348, 'neu': 0.652, 'pos': 0.0, 'compound': -0.1531}
+The keyboard will randomly disconnect from the tablet even when the keyboard is charged and often when that happens the tablet touchscreen stops working so the tablet touchscreen the keyboard useless . {'neg': 0.181, 'neu': 0.819, 'pos': 0.0, 'compound': -0.6369}
+the keyboard is charged {'neg': 0.375, 'neu': 0.625, 'pos': 0.0, 'compound': -0.2023}
+the keyboard useless {'neg': 0.583, 'neu': 0.417, 'pos': 0.0, 'compound': -0.4215}
+the WIFI and/or keyboard would fail to reconnect or the tablet works in short bursts even though they are clearly toggled on {'neg': 0.134, 'neu': 0.763, 'pos': 0.103, 'compound': -0.2023}
+3 times Driver error , so your keyboard wont start . {'neg': 0.278, 'neu': 0.722, 'pos': 0.0, 'compound': -0.4019}
+Then , suddenly the keyboard dock stopped working entirely {'neg': 0.213, 'neu': 0.787, 'pos': 0.0, 'compound': -0.2263}
+The keyboard is charged separately from the tablet {'neg': 0.205, 'neu': 0.795, 'pos': 0.0, 'compound': -0.2023}
+The keyboard charges separately from the tablet . {'neg': 0.259, 'neu': 0.741, 'pos': 0.0, 'compound': -0.2732}
+The keyboard charges very fast {'neg': 0.344, 'neu': 0.656, 'pos': 0.0, 'compound': -0.2732}
+less than 6 months of use The keyboard has only gotten worse {'neg': 0.237, 'neu': 0.763, 'pos': 0.0, 'compound': -0.4767}
+Then , in about 2 months the keyboard stopped working . {'neg': 0.213, 'neu': 0.787, 'pos': 0.0, 'compound': -0.2263}
+sometimes the keyboard reconnects and acts erratically which points to software problems {'neg': 0.197, 'neu': 0.803, 'pos': 0.0, 'compound': -0.4019}
+neither the charging equipment nor the keyboard is the problem -- the tablet section is {'neg': 0.162, 'neu': 0.838, 'pos': 0.0, 'compound': -0.4019}
+On rare occasion the keyboard will get a stuck key and begin a string of the same letter across the screen . {'neg': 0.1, 'neu': 0.9, 'pos': 0.0, 'compound': -0.25}
+the bluetooth keyboard takes some trouble shooting to get the bluetooth keyboard working again {'neg': 0.172, 'neu': 0.828, 'pos': 0.0, 'compound': -0.4019}
+overall , the keyboard totally drags this thing down and makes the keyboard suck more than some older , less capable -LRB- on paper -RRB- laptops I have laying around that this was supposed to replace {'neg': 0.132, 'neu': 0.806, 'pos': 0.062, 'compound': -0.379}
+the keyboard suck more than some older , less capable -LRB- on paper -RRB- {'neg': 0.179, 'neu': 0.679, 'pos': 0.142, 'compound': -0.1513}
+Also , the keyboard and tablet are held together by magnets , which may bother some people {'neg': 0.146, 'neu': 0.854, 'pos': 0.0, 'compound': -0.34}
+The keyboard does need to be charged separately about every 2-3 weeks apparently per other users {'neg': 0.107, 'neu': 0.893, 'pos': 0.0, 'compound': -0.2023}
+The CHI keyboard is lame {'neg': 0.412, 'neu': 0.588, 'pos': 0.0, 'compound': -0.4215}
+The keyboard is awkward to the touch {'neg': 0.211, 'neu': 0.789, 'pos': 0.0, 'compound': -0.1531}
+while the samsung pro has a better screen , the keyboard suffers from a poor design {'neg': 0.325, 'neu': 0.524, 'pos': 0.152, 'compound': -0.5106}
+For example , screen rotation , disabling the keyboard and touchpad when in tablet mode , etc. . {'neg': 0.193, 'neu': 0.807, 'pos': 0.0, 'compound': -0.4767}
+The keyboard itself is probably the one physical weak point . {'neg': 0.244, 'neu': 0.756, 'pos': 0.0, 'compound': -0.4404}
+The keyboard is not at all comfortable to type on {'neg': 0.231, 'neu': 0.769, 'pos': 0.0, 'compound': -0.4023}
+The center upper portion of the keyboard is loose . {'neg': 0.223, 'neu': 0.777, 'pos': 0.0, 'compound': -0.3182}
+the keyboard 's awkwardly pressing on your knees all the time {'neg': 0.187, 'neu': 0.813, 'pos': 0.0, 'compound': -0.3182}
+this keyboard is crap {'neg': 0.464, 'neu': 0.536, 'pos': 0.0, 'compound': -0.3818}
+This keyboard will never get this keyboard confused with those {'neg': 0.204, 'neu': 0.796, 'pos': 0.0, 'compound': -0.3182}
+the keyboard really is awful for a higher-end chromebook {'neg': 0.319, 'neu': 0.681, 'pos': 0.0, 'compound': -0.507}
+the keyboard is poor {'neg': 0.508, 'neu': 0.492, 'pos': 0.0, 'compound': -0.4767}
+If I accidentally exposed the bluetooth interface to a sticky spot on the table , the keyboard would never be the same again . {'neg': 0.171, 'neu': 0.829, 'pos': 0.0, 'compound': -0.4019}
+Yes , the keyboard is not great {'neg': 0.33, 'neu': 0.4, 'pos': 0.27, 'compound': -0.1516}
+Keyboard and Trackpad As many user comment , keyboard is not great , far from . {'neg': 0.215, 'neu': 0.785, 'pos': 0.0, 'compound': -0.5096}
+the keyboard disappears {'neg': 0.545, 'neu': 0.455, 'pos': 0.0, 'compound': -0.34}
+The keyboard is not backlit , which I do n't care about . {'neg': 0.226, 'neu': 0.774, 'pos': 0.0, 'compound': -0.3875}
+there , the keyboard is just awful {'neg': 0.375, 'neu': 0.625, 'pos': 0.0, 'compound': -0.4588}
+the keyboard is awful {'neg': 0.5, 'neu': 0.5, 'pos': 0.0, 'compound': -0.4588}
+The keyboard is annoying at first {'neg': 0.351, 'neu': 0.649, 'pos': 0.0, 'compound': -0.4019}
+the keyboard has failed on me {'neg': 0.398, 'neu': 0.602, 'pos': 0.0, 'compound': -0.5106}
+Terrible on many levels ... . keyboard keys are not laid out well especially the shift and backspace butttons . {'neg': 0.235, 'neu': 0.765, 'pos': 0.0, 'compound': -0.6012}
+Additionally , the keyboard software drivers SUCK -- there is a HUGE flaw where the keyboard will randomly DOUBLE or TRIPLE TYPE LETTERS during your typing and there is NOTHING you can do about double . {'neg': 0.096, 'neu': 0.823, 'pos': 0.081, 'compound': -0.1531}
+Unfortunately , yesterday the keyboard stopped working . {'neg': 0.518, 'neu': 0.482, 'pos': 0.0, 'compound': -0.5106}
+the `` M '' key on the keyboard was defective {'neg': 0.266, 'neu': 0.734, 'pos': 0.0, 'compound': -0.4404}
+the keyboard is the only thing I do n't like about the keyboard , not enough to downgrade the keyboard a full star {'neg': 0.1, 'neu': 0.9, 'pos': 0.0, 'compound': -0.2755}
+The keyboard stopped working . {'neg': 0.388, 'neu': 0.612, 'pos': 0.0, 'compound': -0.2263}
+the keyboard is horrible {'neg': 0.538, 'neu': 0.462, 'pos': 0.0, 'compound': -0.5423}
+the keyboard is another obstacle for holding when the design of machine turns into tablet mode {'neg': 0.143, 'neu': 0.857, 'pos': 0.0, 'compound': -0.3612}
+While keyboard is clearly not really full size , keyboard is close enough that I can type as quickly and with no more errors than I do on my other laptops . {'neg': 0.15, 'neu': 0.767, 'pos': 0.083, 'compound': -0.2944}
+The keyboard is n't the mechanical joy of an old Thinkpad {'neg': 0.235, 'neu': 0.765, 'pos': 0.0, 'compound': -0.4717}
+After just under 2 months of use - the keyboard stopped working . {'neg': 0.174, 'neu': 0.826, 'pos': 0.0, 'compound': -0.2263}
+Full size keyboard , no windows precision drivers on the touchpad , so that is a little hard to use but a mouse makes that more manageable . {'neg': 0.112, 'neu': 0.888, 'pos': 0.0, 'compound': -0.1664}
+The keyboard is a little better than the first gen but the keyboard not the perfect keyboaard . {'neg': 0.202, 'neu': 0.707, 'pos': 0.091, 'compound': -0.4928}
+The loss of the physical keyboard and / or battery is a little annoying in that case , however . {'neg': 0.252, 'neu': 0.748, 'pos': 0.0, 'compound': -0.5729}
+the keyboard was in poor condition -LRB- space bar and return key intermittent -RRB- {'neg': 0.193, 'neu': 0.807, 'pos': 0.0, 'compound': -0.4767}
+keyboard does not work properly the files open alone I am a customer for many years I need a prompt solution to this problem it 's a machine I use for my job Thank you I was exhausted waiting for an answer {'neg': 0.171, 'neu': 0.714, 'pos': 0.114, 'compound': -0.34}
+The keyboard just stopped working . {'neg': 0.322, 'neu': 0.678, 'pos': 0.0, 'compound': -0.2263}
+Very disappointed , the keyboard randomly freeze by the keyboard . {'neg': 0.293, 'neu': 0.604, 'pos': 0.104, 'compound': -0.4927}
+The quality of the keyboard is poor in feeling and text . {'neg': 0.228, 'neu': 0.662, 'pos': 0.11, 'compound': -0.3818}
