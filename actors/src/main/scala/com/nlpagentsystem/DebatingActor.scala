@@ -38,11 +38,13 @@ class DebaterActor(collection: MongoCollection[Review], productId: String, skip:
     )
   }
 
+  override def postStop() {
+    log.info("Both partner and I ran out of arguments. Sepuku")
+  }
+
   def exhausted: Receive = {
     case NewArgument(argument) => log.info(s"New argument from partner, but I cannot respond to it: $argument")
-    case OutOfArguments =>
-      log.info("Both partner and I ran out of arguments. Sepuku")
-      self ! PoisonPill
+    case OutOfArguments => self ! PoisonPill
     case default => log.debug(default.toString)
   }
   override def receive: Receive = {
@@ -81,7 +83,6 @@ class DebaterActor(collection: MongoCollection[Review], productId: String, skip:
         }
       )
       sender() ! OutOfArguments
-      log.info("I have ran out of arguments. Sepuku")
       self ! PoisonPill
   }
 }
