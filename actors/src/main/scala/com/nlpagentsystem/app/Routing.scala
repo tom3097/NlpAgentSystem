@@ -10,7 +10,7 @@ import akka.http.scaladsl.server.directives.RouteDirectives.complete
 import akka.pattern.ask
 import akka.util.Timeout
 import com.nlpagentsystem.DebateSupervisorActor._
-import com.nlpagentsystem.Opinion
+import com.nlpagentsystem.Result
 
 import scala.concurrent.Future
 import scala.concurrent.duration._
@@ -28,9 +28,9 @@ trait Routing extends JsonSupport {
         path(Segment) { productId =>
           concat(
             get {
-              val maybeOpinion: Future[Opinion] = (supervisor() ? GetOpinion(productId)).mapTo[Opinion]
+              val maybeResult: Future[Result] = (supervisor() ? GetOpinion(productId)).mapTo[Result]
               rejectEmptyResponse {
-                complete(maybeOpinion)
+                complete(maybeResult)
               }
             }
           )

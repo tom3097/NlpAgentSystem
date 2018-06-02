@@ -7,13 +7,13 @@
     "features": [
       {
         "name": "processor",
-        "description": "Single core of laptop's processor is super fast.",
-        "polarityScore": 0.851
+        "description": "Processor has only two cores.",
+        "polarityScore": -0.21
       },
       {
         "name": "processor",
-        "description": "Processor has only two cores.",
-        "polarityScore": -0.21
+        "description": "Single core of laptop's processor is super fast.",
+        "polarityScore": 0.851
       },
       {
         "name": "display",

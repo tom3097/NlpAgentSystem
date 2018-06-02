@@ -3,7 +3,7 @@ package com.nlpagentsystem.app
 import akka.actor.{ ActorSystem, Props }
 import akka.http.scaladsl.Http
 import akka.stream.ActorMaterializer
-import com.nlpagentsystem.DebateSupervisorActor
+import com.nlpagentsystem.{ BasicSolver, DebateSupervisorActor }
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
@@ -17,5 +17,5 @@ object Main extends App with Routing {
   log.info(s"Server online, visit eg. http://localhost:8080/opinions/B004GAR91S")
   Await.result(system.whenTerminated, Duration.Inf)
 
-  override def supervisor() = system.actorOf(Props(new DebateSupervisorActor(reviewsCollection)))
+  override def supervisor() = system.actorOf(Props(new DebateSupervisorActor(BasicSolver.create(), reviewsCollection)))
 }
