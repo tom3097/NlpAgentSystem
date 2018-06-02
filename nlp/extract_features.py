@@ -139,7 +139,7 @@ parser = stanford.StanfordParser()
 sid = SentimentIntensityAnalyzer()
 
 feature_reviews = []
-review_counter = 0
+review_counter = 1
 
 for review in reviews:
     print(review_counter)
