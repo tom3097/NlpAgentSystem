@@ -100,6 +100,13 @@ components_counter = {
     'memory': 0
 }
 
+cases_counter = {
+    '1': 0,
+    '2': 0,
+    '3': 0,
+    '4': 0
+}
+
 
 def get_regex(sequence):
     return re.compile(r'\b{}\b'.format(sequence))
@@ -163,12 +170,15 @@ for review in reviews:
                         feature = {
                             'name': '',
                             'description': v_review,
-                            'polarity_score': compound
+                            'polarity_score': compound,
+                            'method': '1'
                         }
+                        comp = list(set(comp))
                         for c in comp:
                             feature['name'] = c
-                            review['features'].append(feature)
+                            review['features'].append(feature.copy())
                             components_counter[c] += 1
+                            cases_counter['1'] += 1
                 # case 2
                 if n.label() == 'NP':
                     np_child = False
@@ -192,12 +202,15 @@ for review in reviews:
                         feature = {
                             'name': '',
                             'description': v_review,
-                            'polarity_score': compound
+                            'polarity_score': compound,
+                            'method': '2'
                         }
+                        comp = list(set(comp))
                         for c in comp:
                             feature['name'] = c
-                            review['features'].append(feature)
+                            review['features'].append(feature.copy())
                             components_counter[c] += 1
+                            cases_counter['2'] += 1
                 # case 3
                 if n.label() == 'NP':
                     np_child = False
@@ -222,12 +235,15 @@ for review in reviews:
                         feature = {
                             'name': '',
                             'description': v_review,
-                            'polarity_score': compound
+                            'polarity_score': compound,
+                            'method': '3'
                         }
+                        comp = list(set(comp))
                         for c in comp:
                             feature['name'] = c
-                            review['features'].append(feature)
+                            review['features'].append(feature.copy())
                             components_counter[c] += 1
+                            cases_counter['3'] += 1
                 # case 4
                 if n.label() == 'NP':
                     comp = []
@@ -247,12 +263,15 @@ for review in reviews:
                         feature = {
                             'name': '',
                             'description': v_review,
-                            'polarity_score': compound
+                            'polarity_score': compound,
+                            'method': '4'
                         }
+                        comp = list(set(comp))
                         for c in comp:
                             feature['name'] = c
-                            review['features'].append(feature)
+                            review['features'].append(feature.copy())
                             components_counter[c] += 1
+                            cases_counter['4'] += 1
         except Exception as e:
             print(e.message)
 
@@ -260,6 +279,7 @@ for review in reviews:
         feature_reviews.append(review)
 
 print(components_counter)
+print(cases_counter)
 
 with open('../data/post-nlp/reviews-with-features.json', 'w') as f:
     f.write(json.dumps(feature_reviews, indent=4))
