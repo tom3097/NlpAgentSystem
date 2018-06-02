@@ -229,15 +229,18 @@ for review in reviews:
                             review['features'].append(feature)
                             components_counter[c] += 1
                 # case 4
-                if n.label() == 'ADJP':
+                if n.label() == 'NP':
                     comp = []
+                    adjp_child = False
                     for i in range(len(n)):
-                        if n[i].label() == 'NP':
-                            np = ' '.join(n[i].leaves())
-                            for key, val in components.iteritems():
-                                for v in val:
-                                    if get_regex(v).search(np.lower()):
-                                        comp.append(key)
+                        if n[i].label() == 'ADJP':
+                            adjp_child = True
+                    if adjp_child:
+                        np = ' '.join(n.leaves())
+                        for key, val in components.iteritems():
+                            for v in val:
+                                if get_regex(v).search(np.lower()):
+                                    comp.append(key)
                     if len(comp) > 0:
                         v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
                         compound = sid.polarity_scores(v_review)['compound']
