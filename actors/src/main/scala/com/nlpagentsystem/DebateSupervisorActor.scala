@@ -20,7 +20,7 @@ object DebateSupervisorActor {
 
 }
 
-class DebateSupervisorActor(collection: MongoCollection[Review]) extends Actor with ActorLogging {
+class DebateSupervisorActor(solver: Solver, collection: MongoCollection[Review]) extends Actor with ActorLogging {
 
   import DebateSupervisorActor._
 
@@ -53,13 +53,16 @@ class DebateSupervisorActor(collection: MongoCollection[Review]) extends Actor w
           debaters.head._1 ! StartDebate(debaters.last._1)
         case Failure(ex) => log.error(ex.toString)
       }
-    case NewArgument(from, argument) => log.info(s"[$from] ${argument.description}")
+    case NewArgument(from, argument) =>
+      log.info(s"[$from] ${argument.description}")
+      solver.addArgument(argument)
     case OutOfArguments(from) => log.info(s"$from run out of arguments.")
     case Terminated(debater) =>
       val debaterName = debaters.remove(debater).orNull
       log.info(s"$debaterName left.")
       if (debaters.isEmpty) {
-        opinionRequester.get ! Opinion("cool", "very cool")
+        val result: Result = solver.solve()
+        opinionRequester.get ! result
       }
   }
 }

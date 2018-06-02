@@ -39,7 +39,7 @@ class BasicSolver extends Solver {
       resultTree.update(node.argument.componentName, nodeToMap(node))
     })
 
-    Result(score, resultTree.toMap)
+    Result(score, resultTree)
   }
 }
 

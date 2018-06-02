@@ -1,6 +1,8 @@
 package com.nlpagentsystem
 
-case class Result(score: Double, tree: Map[String, Any])
+import scala.collection.mutable
+
+case class Result(score: Double, tree: mutable.Map[String, Any])
 
 trait Solver {
   def addArgument(argument: Argument)
