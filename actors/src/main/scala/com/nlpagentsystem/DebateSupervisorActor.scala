@@ -24,6 +24,10 @@ class DebateSupervisorActor(collection: MongoCollection[Review]) extends Actor w
   val numberOfDebaters: Int = 2
   var opinionRequester: Option[ActorRef] = Option.empty
 
+  override def preStart(): Unit = {
+    log.info("Debate supervisor actor started")
+  }
+
   override def receive: Receive = {
     case GetOpinion(productId) =>
       opinionRequester = Option(sender())
