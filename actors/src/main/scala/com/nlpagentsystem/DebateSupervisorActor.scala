@@ -13,15 +13,19 @@ import scala.concurrent.ExecutionContext.Implicits.global
 final case class Opinion(verdict: String, description: String)
 
 object DebateSupervisorActor {
+
   final case class GetOpinion(productId: String)
-  final case class NewArgument(argument: Argument)
+  final case class NewArgument(from: String, argument: Argument)
+  final case class OutOfArguments(from: String)
+
 }
 
 class DebateSupervisorActor(collection: MongoCollection[Review]) extends Actor with ActorLogging {
+
   import DebateSupervisorActor._
 
-  val debaters: mutable.ListBuffer[ActorRef] = mutable.ListBuffer()
-  val numberOfDebaters: Int = 2
+  val debaterNames: List[String] = List("Bob", "Alice")
+  val debaters: mutable.Map[ActorRef, String] = mutable.Map.empty
   var opinionRequester: Option[ActorRef] = Option.empty
 
   override def preStart(): Unit = {
@@ -34,22 +38,26 @@ class DebateSupervisorActor(collection: MongoCollection[Review]) extends Actor w
       collection.count(equal("productId", productId)).toFuture().onComplete {
         case Success(count) =>
           var skip = 0
-          var limit = (count / numberOfDebaters).floor.toInt
-          for (i <- 0 until numberOfDebaters) {
-            val debater = context.actorOf(
-              DebaterActor.props(collection, productId, skip, limit)
-            )
-            context.watch(debater)
-            debaters.+=(debater)
-            skip += limit
+          var limit = (count / debaterNames.size).floor.toInt
+          debaterNames.foreach {
+            name =>
+              val debater = context.actorOf(
+                DebaterActor.props(name, collection, productId, skip, limit)
+              )
+              context.watch(debater)
+              debaters.+=(debater -> name)
+              skip += limit
+              log.info(s"$name added to debate")
           }
 
-          debaters.head ! StartDebate(debaters.last)
+          debaters.head._1 ! StartDebate(debaters.last._1)
         case Failure(ex) => log.error(ex.toString)
       }
-    case NewArgument(argument) => log.debug(s"Received from debaters: $argument")
+    case NewArgument(from, argument) => log.info(s"[$from] ${argument.description}")
+    case OutOfArguments(from) => log.info(s"$from run out of arguments.")
     case Terminated(debater) =>
-      debaters.-=(debater)
+      val debaterName = debaters.remove(debater).orNull
+      log.info(s"$debaterName left.")
       if (debaters.isEmpty) {
         opinionRequester.get ! Opinion("cool", "very cool")
       }

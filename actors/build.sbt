@@ -1,6 +1,8 @@
 lazy val akkaHttpVersion = "10.0.11"
 lazy val akkaVersion    = "2.5.11"
 
+oneJarSettings
+
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
@@ -17,6 +19,8 @@ lazy val root = (project in file(".")).
       "com.typesafe.akka" %% "akka-http-testkit"    % akkaHttpVersion % Test,
       "com.typesafe.akka" %% "akka-testkit"         % akkaVersion     % Test,
       "com.typesafe.akka" %% "akka-stream-testkit"  % akkaVersion     % Test,
-      "org.scalatest"     %% "scalatest"            % "3.0.1"         % Test
+      "org.scalatest"     %% "scalatest"            % "3.0.1"         % Test,
+
+      "commons-lang" % "commons-lang" % "2.6"
     )
   )
