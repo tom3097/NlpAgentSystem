@@ -6,13 +6,16 @@ object BasicSolver {
   }
 }
 class BasicSolver extends Solver {
+  var currentIdentifier = 0
   var arguments: Map[String, List[Node]] = Map.empty
 
-  override def addArgument(argument: Argument): Unit = {
+  override def addArgument(argument: Argument, who: String): Unit = {
     if (arguments.isEmpty || !arguments.isDefinedAt(argument.componentName)) {
       arguments = arguments.+(
         argument.componentName -> List(
           Node(
+            identifier = getNextIdentifier(),
+            who = who,
             kind = getKind(null, argument),
             argument = argument.description,
             score = argument.score
@@ -22,6 +25,8 @@ class BasicSolver extends Solver {
     } else {
       val currentList = arguments.get(argument.componentName).orNull
       val newList = Node(
+        identifier = getNextIdentifier(),
+        who = who,
         kind = getKind(currentList.head, argument),
         argument = argument.description,
         score = argument.score
@@ -36,6 +41,11 @@ class BasicSolver extends Solver {
     } else {
       if (prevNode.score.signum == newArgument.score.signum) "support" else "counter"
     }
+  }
+
+  def getNextIdentifier(): Int = {
+    currentIdentifier += 1
+    currentIdentifier
   }
 
   override def solve(): Result = {

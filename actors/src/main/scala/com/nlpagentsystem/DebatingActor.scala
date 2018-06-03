@@ -6,6 +6,7 @@ import org.mongodb.scala.MongoCollection
 import org.mongodb.scala.model.Filters.equal
 
 import scala.collection.mutable
+import scala.collection.mutable.ListBuffer
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 
@@ -39,14 +40,16 @@ class DebaterActor(
   import DebaterActor._
   import context._
 
-  val arguments: mutable.ListBuffer[Argument] = mutable.ListBuffer()
+  var arguments: ListBuffer[Argument] = ListBuffer.empty
 
   override def preStart() {
     val future = collection.find(equal("product_id", productId)).skip(skip).limit(limit).toFuture()
     val fetchedReviews = Await.result(future, Duration(5, "sec"))
-    fetchedReviews.foreach(
-      review => review.features.foreach(f => arguments.+=(Argument(f.name, f.description, f.polarity_score)))
-    )
+    arguments = fetchedReviews.flatMap(
+      review => review.features
+        .filter(feature => feature.polarity_score.abs >= 0.15)
+        .map(feature => Argument(feature.name, feature.description, feature.polarity_score))
+    ).to[ListBuffer]
   }
 
   def exhausted: Receive = {
@@ -61,7 +64,8 @@ class DebaterActor(
         parent ! SupervisorOutOfArguments(name)
         otherDebater ! OutOfArguments(name)
       } else {
-        val newArgument = arguments.remove(0)
+        val newArgument = arguments.head
+        arguments = arguments.tail
         otherDebater ! NewArgument(name, newArgument)
         parent ! SupervisorNewArgument(name, newArgument)
       }
