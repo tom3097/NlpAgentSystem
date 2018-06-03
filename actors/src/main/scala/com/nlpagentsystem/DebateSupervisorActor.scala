@@ -1,7 +1,6 @@
 package com.nlpagentsystem
 
 import akka.actor.{ Actor, ActorLogging, ActorRef, Terminated }
-import com.nlpagentsystem.DebaterActor.StartDebate
 import org.mongodb.scala.MongoCollection
 
 import scala.util.{ Failure, Success }
@@ -10,17 +9,17 @@ import org.mongodb.scala.model.Filters._
 import scala.collection.mutable
 import scala.concurrent.ExecutionContext.Implicits.global
 
-object DebateSupervisorActor {
-
-  final case class GetOpinion(productId: String)
+object DebateProtocol {
   final case class NewArgument(from: String, argument: Argument)
   final case class OutOfArguments(from: String)
-
+  final case object StartDebate
 }
+
+final case class GetOpinion(productId: String)
 
 class DebateSupervisorActor(solver: Solver, collection: MongoCollection[Review]) extends Actor with ActorLogging {
 
-  import DebateSupervisorActor._
+  import DebateProtocol._
 
   val debaterNames: List[String] = List("Bob", "Alice")
   val debaters: mutable.Map[ActorRef, String] = mutable.Map.empty
@@ -48,13 +47,18 @@ class DebateSupervisorActor(solver: Solver, collection: MongoCollection[Review])
               log.info(s"$name added to debate")
           }
 
-          debaters.head._1 ! StartDebate(debaters.last._1)
+          debaters.head._1 ! StartDebate
         case Failure(ex) => log.error(ex.toString)
       }
-    case NewArgument(from, argument) =>
-      log.info(s"[$from] ${argument.description}")
-      solver.addArgument(argument, from)
-    case OutOfArguments(from) => log.info(s"$from run out of arguments.")
+    case arg: NewArgument =>
+      log.info(s"[${arg.from}] ${arg.argument.description}")
+      val others = debaters.filterNot { case (debater, _) => debater == sender() }
+      others.foreach { case (debater, _) => debater ! arg }
+      solver.addArgument(arg.argument, arg.from)
+    case ooA: OutOfArguments =>
+      log.info(s"${ooA.from} run out of arguments.")
+      val others = debaters.filterNot { case (debater, _) => debater == sender() }
+      others.foreach { case (debater, _) => debater ! ooA }
     case Terminated(debater) =>
       val debaterName = debaters.remove(debater).orNull
       log.info(s"$debaterName left.")

@@ -9,7 +9,7 @@ import akka.http.scaladsl.server.directives.PathDirectives.path
 import akka.http.scaladsl.server.directives.RouteDirectives.complete
 import akka.pattern.ask
 import akka.util.Timeout
-import com.nlpagentsystem.DebateSupervisorActor._
+import com.nlpagentsystem.GetOpinion
 import com.nlpagentsystem.Result
 
 import scala.concurrent.Future

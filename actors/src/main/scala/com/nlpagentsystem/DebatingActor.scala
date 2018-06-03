@@ -1,11 +1,9 @@
 package com.nlpagentsystem
 
-import akka.actor.{ Actor, ActorLogging, ActorRef, PoisonPill, Props }
-import com.nlpagentsystem.DebateSupervisorActor.{ NewArgument => SupervisorNewArgument, OutOfArguments => SupervisorOutOfArguments }
+import akka.actor.{ Actor, ActorLogging, PoisonPill, Props }
 import org.mongodb.scala.MongoCollection
 import org.mongodb.scala.model.Filters.equal
 
-import scala.collection.mutable
 import scala.collection.mutable.ListBuffer
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
@@ -21,11 +19,6 @@ object DebaterActor {
     limit: Int
   ): Props =
     Props(new DebaterActor(name, collection, productId, skip, limit))
-
-  final case class OutOfArguments(from: String)
-  final case class NewArgument(from: String, argument: Argument)
-  final case class StartDebate(otherDebater: ActorRef)
-
 }
 
 class DebaterActor(
@@ -37,7 +30,7 @@ class DebaterActor(
 )
     extends Actor with ActorLogging {
 
-  import DebaterActor._
+  import DebateProtocol._
   import context._
 
   var arguments: ListBuffer[Argument] = ListBuffer.empty
@@ -53,44 +46,37 @@ class DebaterActor(
   }
 
   def exhausted: Receive = {
-    case OutOfArguments(from) =>
-      self ! PoisonPill
+    case OutOfArguments(from) => self ! PoisonPill
     case default => log.debug(default.toString)
   }
   override def receive: Receive = {
-    case StartDebate(otherDebater) =>
+    case StartDebate =>
       if (arguments.isEmpty) {
         become(exhausted)
-        parent ! SupervisorOutOfArguments(name)
-        otherDebater ! OutOfArguments(name)
+        parent ! OutOfArguments(name)
       } else {
         val newArgument = arguments.remove(0)
-        otherDebater ! NewArgument(name, newArgument)
-        parent ! SupervisorNewArgument(name, newArgument)
+        parent ! NewArgument(name, newArgument)
       }
-    case NewArgument(from, argument) =>
+    case NewArgument(_, argument) =>
       if (arguments.isEmpty) {
         become(exhausted)
-        parent ! SupervisorOutOfArguments(name)
-        sender() ! OutOfArguments(name)
+        parent ! OutOfArguments(name)
       } else {
         val similarArgument = arguments.find(a => a.componentName == argument.componentName).orNull
         val newArgument = if (similarArgument != null) {
           arguments.-=(similarArgument)
           similarArgument
         } else arguments.remove(0)
-        sender() ! NewArgument(name, newArgument)
-        parent ! SupervisorNewArgument(name, newArgument)
+        parent ! NewArgument(name, newArgument)
       }
-    case OutOfArguments(from) =>
+    case ooA: OutOfArguments =>
       arguments.foreach(
         arg => {
-          sender() ! NewArgument(name, arg)
-          context.parent ! SupervisorNewArgument(name, arg)
+          parent ! NewArgument(name, arg)
         }
       )
-      parent ! SupervisorOutOfArguments(name)
-      sender() ! OutOfArguments(name)
+      parent ! OutOfArguments(name)
       self ! PoisonPill
   }
 }
