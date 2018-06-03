@@ -53,7 +53,7 @@ class DebateSupervisorActor(solver: Solver, collection: MongoCollection[Review])
       }
     case NewArgument(from, argument) =>
       log.info(s"[$from] ${argument.description}")
-      solver.addArgument(argument)
+      solver.addArgument(argument, from)
     case OutOfArguments(from) => log.info(s"$from run out of arguments.")
     case Terminated(debater) =>
       val debaterName = debaters.remove(debater).orNull

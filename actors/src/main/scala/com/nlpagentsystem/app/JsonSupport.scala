@@ -7,7 +7,7 @@ import spray.json.DefaultJsonProtocol
 trait JsonSupport extends SprayJsonSupport {
   import DefaultJsonProtocol._
 
-  implicit val node = jsonFormat3(Node)
+  implicit val node = jsonFormat5(Node)
   implicit val result = jsonFormat3(Result)
 
 }
