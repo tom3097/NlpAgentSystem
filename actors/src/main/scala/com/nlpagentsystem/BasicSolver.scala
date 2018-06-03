@@ -12,15 +12,19 @@ class BasicSolver extends Solver {
     if (arguments.isEmpty || !arguments.isDefinedAt(argument.componentName)) {
       arguments = arguments.+(
         argument.componentName -> List(
-          Node(getKind(null, argument), argument.description, argument.polarityScore)
+          Node(
+            kind = getKind(null, argument),
+            argument = argument.description,
+            score = argument.polarityScore
+          )
         )
       )
     } else {
       val currentList = arguments.get(argument.componentName).orNull
       val newList = Node(
-        getKind(currentList.head, argument),
-        argument.description,
-        argument.polarityScore
+        kind = getKind(currentList.head, argument),
+        argument = argument.description,
+        score = argument.polarityScore
       ) :: currentList
       arguments = arguments.+(argument.componentName -> newList)
     }
