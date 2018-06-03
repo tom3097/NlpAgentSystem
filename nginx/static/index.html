@@ -36,15 +36,12 @@
 
 		for (var key in data.arguments) {
 			prev_id = 0;
-			for (var i = 0; i < data.arguments[key].length && i < 18; ++i) {
-				var edge_col = '';
-				if (data.arguments["keyboard"][i]["kind"] == "counter") {
-					edge_col = "red";
-				}
-				else {
-					edge_col = "green";
-				}
-				_nodes.push( {id: next_id, label: data.arguments["keyboard"][i]["kind"] + "_" + next_id, fixed:true} );
+			//alert(key);
+			for (var i = 0; i < data.arguments[key].length; ++i) {
+				//alert(key);
+				var edge_col = data.arguments[key][i]["kind"] == "counter" ? "red" : "green";
+				var node_col = data.arguments[key][i]["who"] == "Alice" ? '#C2FABC' : '#97C2FC';
+				_nodes.push( {id: next_id, label: data.arguments[key][i]["kind"] + "_" + next_id, fixed: true, color: node_col} );
 				_edges.push( {from: prev_id, to: next_id, arrows: 'from', color: {color: edge_col}} );
 				prev_id = next_id;
 				next_id += 1;
