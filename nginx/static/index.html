@@ -1,1 +1,74 @@
-fdsfdasfslalaal
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="dist/vis.js"></script>
+    <link href="dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+    	#mynetwork {
+    		width: 1000px;
+    		height: 600px;
+    		border: 1px solid lightgray;
+    	}
+  </style>
+</head>
+<body>
+
+<h1>Product recommendation based on reviews - visualization</h1>
+
+<div id="mynetwork"></div>
+
+<script>
+
+	window.onload = function () {
+	var url = "/agents/opinions/B004GAR91S"
+	$.getJSON(url)
+	.done(function (data) {
+		alert(data.conclusion + ", score: " + data.score);
+
+		var _nodes = [ {id: 0, label: 'Laptop is ok'} ];
+		var _edges = []
+		var next_id = 1;
+		var prev_id = 0;
+
+		for (var key in data.arguments) {
+			prev_id = 0;
+			for (var i = 0; i < data.arguments[key].length && i < 18; ++i) {
+				var edge_col = '';
+				if (data.arguments["keyboard"][i]["kind"] == "counter") {
+					edge_col = "red";
+				}
+				else {
+					edge_col = "green";
+				}
+				_nodes.push( {id: next_id, label: data.arguments["keyboard"][i]["kind"] + "_" + next_id, fixed:true} );
+				_edges.push( {from: prev_id, to: next_id, arrows: 'from', color: {color: edge_col}} );
+				prev_id = next_id;
+				next_id += 1;
+			}
+		}
+
+		var nodes = new vis.DataSet(_nodes);
+		var edges = new vis.DataSet(_edges);
+
+		// create a network
+		var container = document.getElementById('mynetwork');
+		var data = {
+			nodes: nodes,
+			edges: edges
+		};
+		var options = {};
+		var network = new vis.Network(container, data, options);
+	})
+	.fail(function () {
+		alert("error");
+	});
+	}
+
+</script>
+
+</body>
+</html> 
