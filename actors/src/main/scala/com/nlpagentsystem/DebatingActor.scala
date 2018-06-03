@@ -64,8 +64,7 @@ class DebaterActor(
         parent ! SupervisorOutOfArguments(name)
         otherDebater ! OutOfArguments(name)
       } else {
-        val newArgument = arguments.head
-        arguments = arguments.tail
+        val newArgument = arguments.remove(0)
         otherDebater ! NewArgument(name, newArgument)
         parent ! SupervisorNewArgument(name, newArgument)
       }
