@@ -9,24 +9,31 @@
 
     <style type="text/css">
         #mynetwork {
-            width: 1000px;
-            height: 600px;
+            width: 90vw;
+            height: 60vh;
             border: 1px solid lightgray;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
-<body>
+<body bgcolor="#FDF3E7">
 
-<h1>Product recommendation based on reviews - visualization</h1>
+<h1 style="text-align: center; color: #C63D0F;">Product recommendation based on reviews - visualization</h1>
 
-<div style="height: 50px;">
-    <select id="mySelect"></select>
-    <button id="myButton">Recommend</button>
+<div style="height: 50px; margin-bottom: 30px;">
+    <select id="mySelect" style="color: #C63D0F;"></select>
+    <button id="myButton" style="color: #C63D0F;">Recommend</button>
+    <div align="right" style="margin-right: 50px;">
+		<font size="3"><a id="productInfo" href="url"></a></font>
+	</div>
 </div>
+
 <div>
-    <div id="mynetwork"></div>
-    <pre id="eventSpan"></pre>
+    <div id="mynetwork" style="background-color: white; margin-bottom: 30px;"></div>
+    <font size="4" id="eventSpan"></font>
 </div>
+
 <script>
     function loadGraph(productId) {
         document.getElementById('eventSpan').innerHTML = "";
@@ -37,28 +44,25 @@
 
                 var _nodes = [{id: 0, label: 'Laptop is ok', fixed: true, color: final_score_col}];
                 var _edges = []
-                var next_id = 1;
                 var prev_id = 0;
 
                 var descs = {};
 
                 for (var key in data.arguments) {
                     prev_id = 0;
-                    //alert(key);
                     for (var i = 0; i < data.arguments[key].length; ++i) {
-                        //alert(key);
+                        var node_id = data.arguments[key][i]["identifier"];
                         var edge_col = data.arguments[key][i]["kind"] == "counter" ? "red" : "green";
                         var node_col = data.arguments[key][i]["who"] == "Alice" ? '#FFFF00' : '#97C2FC';
                         _nodes.push({
-                            id: next_id,
-                            label: data.arguments[key][i]["kind"] + "_" + next_id,
+                            id: node_id,
+                            label: data.arguments[key][i]["kind"] + "_" + node_id,
                             fixed: true,
                             color: node_col
                         });
-                        _edges.push({from: prev_id, to: next_id, arrows: 'from', color: {color: edge_col}});
-                        descs[next_id] = "[" + data.arguments[key][i]["who"] + "] " + data.arguments[key][i]["argument"];
-                        prev_id = next_id;
-                        next_id += 1;
+                        _edges.push({from: prev_id, to: node_id, arrows: 'from', color: {color: edge_col}});
+                        descs[node_id] = "[" + data.arguments[key][i]["who"] + "] " + data.arguments[key][i]["argument"];
+                        prev_id = node_id;
                     }
                 }
 
@@ -77,9 +81,11 @@
                 network.on("click", function (params) {
                     var node_id = params["nodes"][0];
                     if (node_id === undefined) {
+                        document.getElementById('eventSpan').innerHTML = "";
                         return;
                     }
                     if (descs[node_id] === undefined) {
+                        document.getElementById('eventSpan').innerHTML = "";
                         return;
                     }
                     document.getElementById('eventSpan').innerHTML = descs[node_id];
@@ -108,6 +114,8 @@
     var button = document.getElementById("myButton")
     button.onclick = function () {
         var productId = $('#mySelect').val();
+        document.getElementById('productInfo').href = "https://www.amazon.com/dp/" + $('#mySelect').val();
+        document.getElementById('productInfo').innerHTML = "https://www.amazon.com/dp/" + $('#mySelect').val();
         loadGraph(productId);
     }
 
