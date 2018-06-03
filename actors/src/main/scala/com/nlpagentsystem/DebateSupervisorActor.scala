@@ -33,7 +33,7 @@ class DebateSupervisorActor(solver: Solver, collection: MongoCollection[Review])
   override def receive: Receive = {
     case GetOpinion(productId) =>
       opinionRequester = Option(sender())
-      collection.count(equal("productId", productId)).toFuture().onComplete {
+      collection.count(equal("product_id", productId)).toFuture().onComplete {
         case Success(count) =>
           var skip = 0
           var limit = (count / debaterNames.size).floor.toInt

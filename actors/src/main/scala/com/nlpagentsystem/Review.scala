@@ -5,12 +5,12 @@ import org.mongodb.scala.bson.ObjectId
 case class Feature(
   name: String,
   description: String,
-  polarityScore: Double
+  polarity_score: Double
 )
 
 case class Review(
   _id: ObjectId,
-  productId: String,
-  reviewId: String,
+  product_id: String,
+  review_id: String,
   features: List[Feature]
 )

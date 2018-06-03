@@ -9,7 +9,7 @@ import scala.collection.mutable
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 
-final case class Argument(componentName: String, description: String, polarityScore: Double)
+final case class Argument(componentName: String, description: String, score: Double)
 
 object DebaterActor {
   def props(
@@ -42,10 +42,10 @@ class DebaterActor(
   val arguments: mutable.ListBuffer[Argument] = mutable.ListBuffer()
 
   override def preStart() {
-    val future = collection.find(equal("productId", productId)).skip(skip).limit(limit).toFuture()
+    val future = collection.find(equal("product_id", productId)).skip(skip).limit(limit).toFuture()
     val fetchedReviews = Await.result(future, Duration(5, "sec"))
     fetchedReviews.foreach(
-      review => review.features.foreach(f => arguments.+=(Argument(f.name, f.description, f.polarityScore)))
+      review => review.features.foreach(f => arguments.+=(Argument(f.name, f.description, f.polarity_score)))
     )
   }
 

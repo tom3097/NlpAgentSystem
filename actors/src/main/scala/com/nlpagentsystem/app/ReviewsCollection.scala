@@ -20,8 +20,8 @@ object ReviewsCollection {
     )
     val db = client.getDatabase("argumentation-agents").withCodecRegistry(codecRegistry)
     implicit val collection: MongoCollection[Review] = db.getCollection("reviews")
-    addFakeData()
-    // addIndex()
+    //    addFakeData()
+    addIndex()
     collection
   }
 
@@ -43,7 +43,7 @@ object ReviewsCollection {
     val future = collection.createIndexes(
       Seq(
         IndexModel(
-          Indexes.ascending("productId", "reviewId"),
+          Indexes.ascending("product_id", "review_id"),
           IndexOptions().background(false).unique(true)
         )
       )

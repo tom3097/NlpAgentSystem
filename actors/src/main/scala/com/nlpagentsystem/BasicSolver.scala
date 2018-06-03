@@ -15,7 +15,7 @@ class BasicSolver extends Solver {
           Node(
             kind = getKind(null, argument),
             argument = argument.description,
-            score = argument.polarityScore
+            score = argument.score
           )
         )
       )
@@ -24,7 +24,7 @@ class BasicSolver extends Solver {
       val newList = Node(
         kind = getKind(currentList.head, argument),
         argument = argument.description,
-        score = argument.polarityScore
+        score = argument.score
       ) :: currentList
       arguments = arguments.+(argument.componentName -> newList)
     }
@@ -32,9 +32,9 @@ class BasicSolver extends Solver {
 
   def getKind(prevNode: Node, newArgument: Argument): String = {
     if (prevNode == null) {
-      if (newArgument.polarityScore.signum == 1) "support" else "counter"
+      if (newArgument.score.signum == 1) "support" else "counter"
     } else {
-      if (prevNode.score.signum == newArgument.polarityScore.signum) "support" else "counter"
+      if (prevNode.score.signum == newArgument.score.signum) "support" else "counter"
     }
   }
 
