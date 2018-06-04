@@ -6,6 +6,6 @@
 
 ### Launch application
 
-sudo docker-compose up
+* `sudo docker-compose up`
 
 After launching visit localhost:80 to use the application.
