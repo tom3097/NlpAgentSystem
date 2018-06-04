@@ -19,49 +19,57 @@
 
 <h1 style="text-align: center; color: #C63D0F;">Product recommendation based on reviews - visualization</h1>
 
-<div style="height: 50px; margin-bottom: 30px;">
+<div style="margin-bottom: 15px;">
     <select id="mySelect" style="color: #C63D0F;"></select>
     <button id="myButton" style="color: #C63D0F;">Recommend</button>
-    <div align="right" style="margin-right: 50px;">
-		<font size="3"><a id="productInfo" href="url"></a></font>
-	</div>
+	<a id="productInfo" href="url"></a>
 </div>
 
 <div>
-    <div id="mynetwork" style="background-color: white; margin-bottom: 30px;"></div>
-    <font size="4" id="eventSpan"></font>
+    <div id="mynetwork" style="background-color: white; margin-bottom: 15px;"></div>
+    <div id="eventSpan"></div>
 </div>
 
 <script>
+    var nameNodeColorMapping = {
+        "Alice": "#FFFF00",
+        "Bob": "#97C2FC"
+    };
+    var kindEdgeColorMapping = {
+        "counter": "red",
+        "support": "green"
+    };
+    var productIds = ["B004GAR91S", "B009AEPIPE", "B009MPBFNU", "B00ATANTRW", "B00ATANVLG", "B00AUT1RVW", "B00AY1FIGG", "B00BBLEYXQ", "B00BFFDF3I", "B00CRY012E", "B00DRG9PG4", "B00F3ZNQXU", "B00FI1FUKG", "B00GJUQ4Z0", "B00I9HU29K", "B00IPQXZ62", "B00KHQWRZS", "B00NJF1IIG", "B00NJNEDSU", "B00NJNEEAW", "B00NJNEEEI", "B00NMVEWC6", "B00NNQFO72", "B00OVFGU36", "B00QD530AI", "B00R1HQ1TO", "B00REWQNXK", "B00RH6QZWM", "B00S44ADQU", "B00SOYGMQ0", "B00T7XT0S4", "B00UCENG14", "B00UPKMXIC", "B014854RBK", "B014854RGK", "B014VHW24Y", "B015PYYPFG", "B0161DGXIC", "B0163GS05Q", "B016UF59WW", "B016WM8R9A", "B01717WBWO", "B017A6S0FS", "B019RJSZRO", "B019TTJ84Q", "B01B6QL2KI", "B01B8T58VM", "B01BNDI8DS", "B01DETDTV0", "B01DF599WG", "B01E9TXXQK", "B01ER4ARCU", "B01F3R99HY", "B01F7LH5W2", "B01FJFMLRU", "B01HAQBONI", "B01HZT6AR0", "B01IUYTLP2", "B01J42JPJG", "B01K1JW9SK", "B01KWCID0E", "B01L8PDMOG", "B01L8PENTO", "B01LNOE4UI", "B01LXYG77O", "B01LYU3UMJ", "B01LZ6XKS6", "B01M1JB8RZ", "B01M2YY3IU", "B01M3R2Y5F", "B01M4HQO1M", "B01MQJ34SV", "B01N0XLHQQ", "B01N2BIGDH", "B01N5G5PG2", "B06W2KCQVD", "B06W57W6CX", "B06WD61CF5", "B06WVM8Q8K", "B07193R786", "B071LB1GG4", "B071NMW1MW", "B071V7MXC3", "B072598QYG", "B0746QGY3M", "B074TXHFX4", "B075CKH4SJ", "B075KFFMZS", "B075KPJBNK", "B075RGSF13", "B076J15LKM", "B0774Z5VJN", "B077PQ1VNY", "B077QGHB4L", "B077V4GNL8", "B078DN2PVJ", "B079WS2NFD", "B07C57ZNMC", "B07C7NL2L9", "B07CZNPYRX"];
+
     function loadGraph(productId) {
         document.getElementById('eventSpan').innerHTML = "";
         var url = "/agents/opinions/" + productId;
         $.getJSON(url)
             .done(function (data) {
                 var final_score_col = data.score >= 0 ? "#66ff99" : "#ff99ff";
-
-                var _nodes = [{id: 0, label: 'Laptop is ok', fixed: true, color: final_score_col}];
-                var _edges = []
+                var _nodes = [{id: 0, label: data.conclusion, fixed: true, color: final_score_col}];
+                var _edges = [];
                 var prev_id = 0;
-
-                var descs = {};
+                var descs = {0: "Total score: " + data.score.toFixed(2)};
 
                 for (var key in data.arguments) {
                     prev_id = 0;
-                    for (var i = 0; i < data.arguments[key].length; ++i) {
-                        var node_id = data.arguments[key][i]["identifier"];
-                        var edge_col = data.arguments[key][i]["kind"] == "counter" ? "red" : "green";
-                        var node_col = data.arguments[key][i]["who"] == "Alice" ? '#FFFF00' : '#97C2FC';
+                    var arguments = data.arguments[key];
+                    arguments.forEach(function (arg) {
+                        var nodeId = arg.identifier;
+                        var edgeCol = kindEdgeColorMapping[arg.kind];
+                        var nodeCol = nameNodeColorMapping[arg.who];
                         _nodes.push({
-                            id: node_id,
-                            label: data.arguments[key][i]["kind"] + "_" + node_id,
+                            id: nodeId,
+                            label: arg.kind + "_" + nodeId,
                             fixed: true,
-                            color: node_col
+                            color: nodeCol
                         });
-                        _edges.push({from: prev_id, to: node_id, arrows: 'from', color: {color: edge_col}});
-                        descs[node_id] = "[" + data.arguments[key][i]["who"] + "] " + data.arguments[key][i]["argument"];
-                        prev_id = node_id;
-                    }
+                        _edges.push({from: prev_id, to: nodeId, arrows: 'from', color: {color: edgeCol}});
+                        var sign = arg.score >= 0 ? "+" : "-";
+                        descs[nodeId] = "[" + arg.who + "] (" + sign + Math.abs(arg.score) +") " + arg.argument;
+                        prev_id = nodeId;
+                    });
                 }
 
                 var nodes = new vis.DataSet(_nodes);
@@ -94,7 +102,7 @@
                 		tooltipDelay: 300,
                 		zoomView: true
                 	}
-                }
+                };
                 var network = new vis.Network(container, data, options);
 
                 network.on("click", function (params) {
@@ -115,28 +123,24 @@
             });
     }
 
+    $(function() {
+        var selectList = document.getElementById("mySelect");
+        productIds.forEach(function (productId) {
+            var option = document.createElement("option");
+            option.value = productId;
+            option.text = productId;
+            selectList.appendChild(option);
+        });
 
-    //Create array of options to be added
-    var array = ["B004GAR91S", "B009AEPIPE", "B009MPBFNU", "B00ATANTRW", "B00ATANVLG", "B00AUT1RVW", "B00AY1FIGG", "B00BBLEYXQ", "B00BFFDF3I", "B00CRY012E", "B00DRG9PG4", "B00F3ZNQXU", "B00FI1FUKG", "B00GJUQ4Z0", "B00I9HU29K", "B00IPQXZ62", "B00KHQWRZS", "B00NJF1IIG", "B00NJNEDSU", "B00NJNEEAW", "B00NJNEEEI", "B00NMVEWC6", "B00NNQFO72", "B00OVFGU36", "B00QD530AI", "B00R1HQ1TO", "B00REWQNXK", "B00RH6QZWM", "B00S44ADQU", "B00SOYGMQ0", "B00T7XT0S4", "B00UCENG14", "B00UPKMXIC", "B014854RBK", "B014854RGK", "B014VHW24Y", "B015PYYPFG", "B0161DGXIC", "B0163GS05Q", "B016UF59WW", "B016WM8R9A", "B01717WBWO", "B017A6S0FS", "B019RJSZRO", "B019TTJ84Q", "B01B6QL2KI", "B01B8T58VM", "B01BNDI8DS", "B01DETDTV0", "B01DF599WG", "B01E9TXXQK", "B01ER4ARCU", "B01F3R99HY", "B01F7LH5W2", "B01FJFMLRU", "B01HAQBONI", "B01HZT6AR0", "B01IUYTLP2", "B01J42JPJG", "B01K1JW9SK", "B01KWCID0E", "B01L8PDMOG", "B01L8PENTO", "B01LNOE4UI", "B01LXYG77O", "B01LYU3UMJ", "B01LZ6XKS6", "B01M1JB8RZ", "B01M2YY3IU", "B01M3R2Y5F", "B01M4HQO1M", "B01MQJ34SV", "B01N0XLHQQ", "B01N2BIGDH", "B01N5G5PG2", "B06W2KCQVD", "B06W57W6CX", "B06WD61CF5", "B06WVM8Q8K", "B07193R786", "B071LB1GG4", "B071NMW1MW", "B071V7MXC3", "B072598QYG", "B0746QGY3M", "B074TXHFX4", "B075CKH4SJ", "B075KFFMZS", "B075KPJBNK", "B075RGSF13", "B076J15LKM", "B0774Z5VJN", "B077PQ1VNY", "B077QGHB4L", "B077V4GNL8", "B078DN2PVJ", "B079WS2NFD", "B07C57ZNMC", "B07C7NL2L9", "B07CZNPYRX"];
-
-    //Create and append select list
-
-    var selectList = document.getElementById("mySelect");
-
-    //Create and append the options
-    for (var i = 0; i < array.length; i++) {
-        var option = document.createElement("option");
-        option.value = array[i];
-        option.text = array[i];
-        selectList.appendChild(option);
-    }
-    var button = document.getElementById("myButton")
-    button.onclick = function () {
-        var productId = $('#mySelect').val();
-        document.getElementById('productInfo').href = "https://www.amazon.com/dp/" + $('#mySelect').val();
-        document.getElementById('productInfo').innerHTML = "https://www.amazon.com/dp/" + $('#mySelect').val();
-        loadGraph(productId);
-    }
+        var button = document.getElementById("myButton");
+        button.onclick = function () {
+            var productId = $('#mySelect').val();
+            var productUrl = "https://www.amazon.com/dp/" + productId;
+            document.getElementById('productInfo').href = productUrl;
+            document.getElementById('productInfo').innerHTML = productUrl;
+            loadGraph(productId);
+        };
+    });
 
 </script>
 
