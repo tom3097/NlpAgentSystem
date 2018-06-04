@@ -2,10 +2,18 @@
 
 ### Requirements:
 
-* Docker ver 2
+* Docker ver 2 (on Linux)
+* nginx (on MacOS)
 
-### Launch application
+### Launch application - Linux
 
 * `sudo docker-compose up`
+
+After launching visit localhost:80 to use the application.
+
+### Launch application - MacOS
+
+* `./macOS_update.app.sh`
+* `./macOS_start_nginx.sh`
 
 After launching visit localhost:80 to use the application.
