@@ -20,7 +20,6 @@ object ReviewsCollection {
     )
     val db = client.getDatabase("argumentation-agents").withCodecRegistry(codecRegistry)
     implicit val collection: MongoCollection[Review] = db.getCollection("reviews")
-    //    addFakeData()
     addIndex()
     collection
   }
