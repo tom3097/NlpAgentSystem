@@ -1,6 +1,4 @@
-# NlpAgentSystem
-
-## scrapper
+# scrapper
 
 ### Installation
 * create new python virtualenv
