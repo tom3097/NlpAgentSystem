@@ -2,7 +2,7 @@
 
 ### Requirements:
 
-* Docker ver 2 (on Linux)
+* Docker ver. 2 (on Linux)
 * nginx (on MacOS)
 
 ### Launch application - Linux
@@ -13,7 +13,7 @@ After launching visit localhost:80 to use the application.
 
 ### Launch application - MacOS
 
-* `./macOS_update.app.sh`
+* `./macOS_update_app.sh`
 * `./macOS_start_nginx.sh`
 
 After launching visit localhost:80 to use the application.
