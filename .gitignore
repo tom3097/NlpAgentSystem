@@ -2,3 +2,7 @@ __pycache__
 .idea/*
 *.log
 *.old.*
+nlp/neuralcoref/
+nlp/stanford-ner-2018-02-27/
+nlp/stanford-parser-full-2018-02-27/
+nlp/stanford-postagger-2018-02-27/

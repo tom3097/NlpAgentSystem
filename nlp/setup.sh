@@ -1,8 +1,14 @@
 #!/bin/sh
-# You should source this file to keep the environment variables changes.
 
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
+
+if [ ! -d $SCRIPTPATH/neuralcoref ]; then
+    mkdir $SCRIPTPATH/neuralcoref
+    git clone https://github.com/huggingface/neuralcoref.git $SCRIPTPATH/neuralcoref
+    pip install neuralcoref/.
+    python -m spacy download en
+fi
 
 if [ ! -d $SCRIPTPATH/stanford-parser-full-2018-02-27 ]; then
     wget https://nlp.stanford.edu/software/stanford-parser-full-2018-02-27.zip -P $SCRIPTPATH
@@ -21,6 +27,3 @@ if [ ! -d $SCRIPTPATH/stanford-ner-2018-02-27 ]; then
     unzip $SCRIPTPATH/stanford-ner-2018-02-27.zip -d $SCRIPTPATH
     rm $SCRIPTPATH/stanford-ner-2018-02-27.zip
 fi
-
-export CLASSPATH=$CLASSPATH:$SCRIPTPATH/stanford-ner-2018-02-27:$SCRIPTPATH/stanford-parser-full-2018-02-27:$SCRIPTPATH/stanford-postagger-2018-02-27
-export STANFORD_MODELS=$SCRIPTPATH/stanford-postagger-2018-02-27/models:$SCRIPTPATH/stanford-ner-2018-02-27/classifiers

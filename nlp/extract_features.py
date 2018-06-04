@@ -4,6 +4,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import json
 import re
 
+
 components = {
     'processor': [
         'processor',
@@ -111,7 +112,6 @@ cases_counter = {
 def get_regex(sequence):
     return re.compile(r'\b{}\b'.format(sequence))
 
-
 def convert_PRN(leaves):
     conv_leaves = []
     for l in leaves:
@@ -123,7 +123,6 @@ def convert_PRN(leaves):
             conv_leaves.append(l)
     return conv_leaves
 
-
 def contains_keyword(sentence):
     for val in components.values():
         for v in val:
@@ -131,155 +130,159 @@ def contains_keyword(sentence):
                 return True
     return False
 
+def main():
+    with open('data/pre-nlp/reviews-after-coreference.json') as f:
+        reviews = json.load(f)
 
-with open('../data/pre-nlp/reviews-coref.json') as f:
-    reviews = json.load(f)
+    parser = stanford.StanfordParser()
+    sid = SentimentIntensityAnalyzer()
 
-parser = stanford.StanfordParser()
-sid = SentimentIntensityAnalyzer()
+    feature_reviews = []
+    review_counter = 1
 
-feature_reviews = []
-review_counter = 1
-
-for review in reviews:
-    print(review_counter)
-    review_counter += 1
-    text = review['text']
-    review['features'] = []
-    sentences = sent_tokenize(text)
-    for sentence in sentences:
-        if not contains_keyword(sentence):
-            continue
-        try:
-            root = next(parser.raw_parse(sentence))
-            nodes = root.subtrees()
-            for n in nodes:
-                # case 1
-                if n.label() == 'S':
-                    comp = []
-                    for i in range(len(n)):
-                        if n[i].label() == 'NP' and n[i].height() == 3:
-                            np = ' '.join(n[i].leaves())
-                            for key, val in components.iteritems():
-                                for v in val:
-                                    if get_regex(v).search(np.lower()):
-                                        comp.append(key)
-                    if len(comp) > 0:
-                        v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
-                        compound = sid.polarity_scores(v_review)['compound']
-                        feature = {
-                            'name': '',
-                            'description': v_review,
-                            'polarity_score': compound,
-                            'method': '1'
-                        }
-                        comp = list(set(comp))
-                        for c in comp:
-                            feature['name'] = c
-                            review['features'].append(feature.copy())
-                            components_counter[c] += 1
-                            cases_counter['1'] += 1
-                # case 2
-                if n.label() == 'NP':
-                    np_child = False
-                    whnp_child = False
-                    comp = []
-                    for i in range(len(n)):
-                        if n[i].label() == 'NP' and n[i].height() == 3:
-                            np = ' '.join(n[i].leaves())
-                            for key, val in components.iteritems():
-                                for v in val:
-                                    if get_regex(v).search(np.lower()):
-                                        comp.append(key)
-                                        np_child = True
-                        elif n[i].label() == 'SBAR':
-                            for j in range(len(n[i])):
-                                if n[i][j].label() == 'WHNP':
-                                    whnp_child = True
-                    if np_child and whnp_child:
-                        v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
-                        compound = sid.polarity_scores(v_review)['compound']
-                        feature = {
-                            'name': '',
-                            'description': v_review,
-                            'polarity_score': compound,
-                            'method': '2'
-                        }
-                        comp = list(set(comp))
-                        for c in comp:
-                            feature['name'] = c
-                            review['features'].append(feature.copy())
-                            components_counter[c] += 1
-                            cases_counter['2'] += 1
-                # case 3
-                if n.label() == 'NP':
-                    np_child = False
-                    whnp_child = False
-                    comp = []
-                    for i in range(len(n)):
-                        if n[i].label() == 'NP' and n[i].height() == 3:
-                            np = ' '.join(n[i].leaves())
-                            for key, val in components.iteritems():
-                                for v in val:
-                                    if get_regex(v).search(np.lower()):
-                                        comp.append(key)
-                                        np_child = True
-                        elif n[i].label() == 'PRN' and len(n[i]) == 3:
-                            if n[i][1].label() == 'SBAR':
-                                for j in range(len(n[i][1])):
-                                    if n[i][1][j].label() == 'WHNP':
+    for review in reviews:
+        print(review_counter)
+        review_counter += 1
+        text = review['text']
+        review['features'] = []
+        sentences = sent_tokenize(text)
+        for sentence in sentences:
+            if not contains_keyword(sentence):
+                continue
+            try:
+                root = next(parser.raw_parse(sentence))
+                nodes = root.subtrees()
+                for n in nodes:
+                    # case 1
+                    if n.label() == 'S':
+                        comp = []
+                        for i in range(len(n)):
+                            if n[i].label() == 'NP' and n[i].height() == 3:
+                                np = ' '.join(n[i].leaves())
+                                for key, val in components.iteritems():
+                                    for v in val:
+                                        if get_regex(v).search(np.lower()):
+                                            comp.append(key)
+                        if len(comp) > 0:
+                            v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
+                            compound = sid.polarity_scores(v_review)['compound']
+                            feature = {
+                                'name': '',
+                                'description': v_review,
+                                'polarity_score': compound,
+                                'method': '1'
+                            }
+                            comp = list(set(comp))
+                            for c in comp:
+                                feature['name'] = c
+                                review['features'].append(feature.copy())
+                                components_counter[c] += 1
+                                cases_counter['1'] += 1
+                    # case 2
+                    if n.label() == 'NP':
+                        np_child = False
+                        whnp_child = False
+                        comp = []
+                        for i in range(len(n)):
+                            if n[i].label() == 'NP' and n[i].height() == 3:
+                                np = ' '.join(n[i].leaves())
+                                for key, val in components.iteritems():
+                                    for v in val:
+                                        if get_regex(v).search(np.lower()):
+                                            comp.append(key)
+                                            np_child = True
+                            elif n[i].label() == 'SBAR':
+                                for j in range(len(n[i])):
+                                    if n[i][j].label() == 'WHNP':
                                         whnp_child = True
-                    if np_child and whnp_child:
-                        v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
-                        compound = sid.polarity_scores(v_review)['compound']
-                        feature = {
-                            'name': '',
-                            'description': v_review,
-                            'polarity_score': compound,
-                            'method': '3'
-                        }
-                        comp = list(set(comp))
-                        for c in comp:
-                            feature['name'] = c
-                            review['features'].append(feature.copy())
-                            components_counter[c] += 1
-                            cases_counter['3'] += 1
-                # case 4
-                if n.label() == 'NP':
-                    comp = []
-                    adjp_child = False
-                    for i in range(len(n)):
-                        if n[i].label() == 'ADJP':
-                            adjp_child = True
-                    if adjp_child:
-                        np = ' '.join(n.leaves())
-                        for key, val in components.iteritems():
-                            for v in val:
-                                if get_regex(v).search(np.lower()):
-                                    comp.append(key)
-                    if len(comp) > 0:
-                        v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
-                        compound = sid.polarity_scores(v_review)['compound']
-                        feature = {
-                            'name': '',
-                            'description': v_review,
-                            'polarity_score': compound,
-                            'method': '4'
-                        }
-                        comp = list(set(comp))
-                        for c in comp:
-                            feature['name'] = c
-                            review['features'].append(feature.copy())
-                            components_counter[c] += 1
-                            cases_counter['4'] += 1
-        except Exception as e:
-            print(e.message)
+                        if np_child and whnp_child:
+                            v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
+                            compound = sid.polarity_scores(v_review)['compound']
+                            feature = {
+                                'name': '',
+                                'description': v_review,
+                                'polarity_score': compound,
+                                'method': '2'
+                            }
+                            comp = list(set(comp))
+                            for c in comp:
+                                feature['name'] = c
+                                review['features'].append(feature.copy())
+                                components_counter[c] += 1
+                                cases_counter['2'] += 1
+                    # case 3
+                    if n.label() == 'NP':
+                        np_child = False
+                        whnp_child = False
+                        comp = []
+                        for i in range(len(n)):
+                            if n[i].label() == 'NP' and n[i].height() == 3:
+                                np = ' '.join(n[i].leaves())
+                                for key, val in components.iteritems():
+                                    for v in val:
+                                        if get_regex(v).search(np.lower()):
+                                            comp.append(key)
+                                            np_child = True
+                            elif n[i].label() == 'PRN' and len(n[i]) == 3:
+                                if n[i][1].label() == 'SBAR':
+                                    for j in range(len(n[i][1])):
+                                        if n[i][1][j].label() == 'WHNP':
+                                            whnp_child = True
+                        if np_child and whnp_child:
+                            v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
+                            compound = sid.polarity_scores(v_review)['compound']
+                            feature = {
+                                'name': '',
+                                'description': v_review,
+                                'polarity_score': compound,
+                                'method': '3'
+                            }
+                            comp = list(set(comp))
+                            for c in comp:
+                                feature['name'] = c
+                                review['features'].append(feature.copy())
+                                components_counter[c] += 1
+                                cases_counter['3'] += 1
+                    # case 4
+                    if n.label() == 'NP':
+                        comp = []
+                        adjp_child = False
+                        for i in range(len(n)):
+                            if n[i].label() == 'ADJP':
+                                adjp_child = True
+                        if adjp_child:
+                            np = ' '.join(n.leaves())
+                            for key, val in components.iteritems():
+                                for v in val:
+                                    if get_regex(v).search(np.lower()):
+                                        comp.append(key)
+                        if len(comp) > 0:
+                            v_review = u' '.join(convert_PRN(n.leaves())).encode('utf-8').strip()
+                            compound = sid.polarity_scores(v_review)['compound']
+                            feature = {
+                                'name': '',
+                                'description': v_review,
+                                'polarity_score': compound,
+                                'method': '4'
+                            }
+                            comp = list(set(comp))
+                            for c in comp:
+                                feature['name'] = c
+                                review['features'].append(feature.copy())
+                                components_counter[c] += 1
+                                cases_counter['4'] += 1
+            except Exception as e:
+                print(e.message)
 
-    if len(review['features']) > 0:
-        feature_reviews.append(review)
+        if len(review['features']) > 0:
+            feature_reviews.append(review)
 
-print(components_counter)
-print(cases_counter)
+    print(components_counter)
+    print(cases_counter)
 
-with open('../data/post-nlp/reviews-with-features.json', 'w') as f:
-    f.write(json.dumps(feature_reviews, indent=4))
+    with open('data/post-nlp/reviews-with-features.json', 'w') as f:
+        f.write(json.dumps(feature_reviews, indent=4))
+
+
+if __name__ == '__main__':
+    main()
