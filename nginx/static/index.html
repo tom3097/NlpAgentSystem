@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="dist/vis.js"></script>
     <link href="dist/vis-network.min.css" rel="stylesheet" type="text/css"/>
 
@@ -75,7 +73,28 @@
                     nodes: nodes,
                     edges: edges
                 };
-                var options = {};
+
+                var options = {
+                	interaction:{
+                		dragNodes:true,
+                		dragView: true,
+                		hideEdgesOnDrag: false,
+                		hideNodesOnDrag: false,
+                		hover: false,
+                		hoverConnectedEdges: false,
+                		keyboard: {
+                			enabled: true,
+                			speed: {x: 10, y: 10, zoom: 0.02},
+                			bindToWindow: true
+                		},
+                		multiselect: false,
+                		navigationButtons: false,
+                		selectable: true,
+                		selectConnectedEdges: false,
+                		tooltipDelay: 300,
+                		zoomView: true
+                	}
+                }
                 var network = new vis.Network(container, data, options);
 
                 network.on("click", function (params) {
