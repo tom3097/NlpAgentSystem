@@ -24,20 +24,6 @@ object ReviewsCollection {
     collection
   }
 
-  private def addFakeData()(implicit collection: MongoCollection[Review]) = {
-    val fakeReviews = Seq()
-    fakeReviews.foreach(
-      review => {
-        val future = collection.insertOne(review).toFuture()
-        try {
-          Await.result(future, Duration.Inf)
-        } catch {
-          case e: Exception => println(e)
-        }
-      }
-    )
-  }
-
   private def addIndex()(implicit collection: MongoCollection[Review]) = {
     val future = collection.createIndexes(
       Seq(

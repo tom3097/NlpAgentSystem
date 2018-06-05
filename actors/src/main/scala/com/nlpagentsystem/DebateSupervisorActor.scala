@@ -22,7 +22,7 @@ class DebateSupervisorActor(solver: Solver, collection: MongoCollection[Review])
   import DebateProtocol._
 
   val debaterNames: List[String] = List("Bob", "Alice")
-  val debaters: mutable.Map[ActorRef, String] = mutable.Map.empty
+  val activeDebaters: mutable.Map[ActorRef, String] = mutable.Map.empty
   var opinionRequester: Option[ActorRef] = Option.empty
 
   override def preStart(): Unit = {
@@ -42,27 +42,30 @@ class DebateSupervisorActor(solver: Solver, collection: MongoCollection[Review])
                 DebaterActor.props(name, collection, productId, skip, limit)
               )
               context.watch(debater)
-              debaters.+=(debater -> name)
+              activeDebaters.+=(debater -> name)
               skip += limit
               log.info(s"$name added to debate")
           }
 
-          debaters.head._1 ! StartDebate
+          activeDebaters.head._1 ! StartDebate
         case Failure(ex) => log.error(ex.toString)
       }
     case arg: NewArgument =>
       log.info(s"[${arg.from}] ${arg.argument.description}")
-      val others = debaters.filterNot { case (debater, _) => debater == sender() }
+      val others = activeDebaters.filterNot { case (debater, _) => debater == sender() }
       others.foreach { case (debater, _) => debater ! arg }
       solver.addArgument(arg.argument, arg.from)
     case ooA: OutOfArguments =>
       log.info(s"${ooA.from} run out of arguments.")
-      val others = debaters.filterNot { case (debater, _) => debater == sender() }
+      val others = activeDebaters.filterNot { case (debater, _) => debater == sender() }
       others.foreach { case (debater, _) => debater ! ooA }
-    case Terminated(debater) =>
-      val debaterName = debaters.remove(debater).orNull
+    case Terminated(killedDebater) =>
+      val debaterName = activeDebaters.remove(killedDebater).orNull
       log.info(s"$debaterName left.")
-      if (debaters.isEmpty) {
+      activeDebaters.foreach {
+        case (debater, _) => debater ! OutOfArguments(debaterName)
+      }
+      if (activeDebaters.isEmpty) {
         val result = solver.solve()
         opinionRequester.get ! result
       }
